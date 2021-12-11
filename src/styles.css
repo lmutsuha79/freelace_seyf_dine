@@ -8,16 +8,54 @@
 @tailwind components;
 @tailwind utilities;
 
-.container{
-
-}
-/* bigger than 1024px large devices */
-@media screen and (min-width: 1024px) {
-    .container{
-        /* background-color: red; */
-        padding: 0 98px;
+@layer components{
+    .item{
+        @apply flex flex-row items-center rounded-2xl;
+    }
+    .icon_container{
+        @apply w-12 h-12 rounded-full grid place-content-center
+    }
+    .item_title_num{
+        @apply font-semibold text-black;
+        
+    }
+    .item_desc{
+        @apply text-sm font-semibold text-gray block -mt-1
     }
 }
+
+
+.container{
+    /* background-color: lightgreen; */
+}
+/* bigger than 1200px large devices */
+ /* @media screen and (max-width: 1220px) {
+    .container{
+        max-width: 1170px;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .container{
+        max-width: 970px;
+    }
+}
+@media screen and (max-width: 769px) {
+    .container{
+        max-width: 750px;
+    }
+} */
+/* @media screen and (max-width: 768px) {
+    .container{
+        max-width: 750px;
+    }
+} */
+/*
+@media screen and (max-width: 1024px) {
+    .container{
+        max-width: calc(100% - 48px);
+    }
+} */
 /* h position in tablet and small pc screan less than 1024px bigger than 768px*/
 /* @media screen and (min-width:769px) and  (max-width:1023px) {
     .container{
@@ -25,12 +63,11 @@
     }
 } */
 /* under 768px (tablet and mobile) */
-@media screen and (max-width: 1024px) {
+/* @media screen and (max-width: 1024px) {
     .container{
-        /* background-color: green; */
         padding: 0 24px;
     }
-}
+} */
 
 
 
@@ -52,11 +89,55 @@ a{
 a:active, a:focus {
   outline: 0;
   border: none;
-  -moz-outline-style: none;
 }
 ul{
     list-style: none;
 }
+header{
+    height: 101px;  
+}
+@media screen and (max-width: 768px) {
+    header{
+        height: 100vh;
+    }
+}
+.mobile_nav{
+    
+}
+.mobile_nav header{
+    height: 75px;
+}
+.mobile_nav .page_links{
+    padding: 60px 0px;
+    gap: 30px;
+}
+@layer components{
+    .mobile_nav .page_links a {
+        @apply text-sm font-semibold text-gray hover:text-black transition-colors ease-in capitalize;
+    }
+    .mobile_nav .page_links a:first-child {
+        @apply text-black;
+    }
+}
+
+.mobile_nav .social_links{
+    padding: 60px 0px;
+    gap: 30px;
+}
+
+@layer components{
+    .mobile_nav .social_links a {
+        @apply text-sm font-semibold text-black hover:text-gray  capitalize;
+    }
+    .mobile_nav .social_links  li {
+        @apply  flex flex-row items-center gap-4;
+    }  
+}
+.mobile_nav .social_links li:hover path{
+    fill:#3772FF;
+}
+
+
 .desk_nav{
     height: 100px;
 }
@@ -90,7 +171,7 @@ ul{
 .hero_content{
     height: 100%;
     padding: 60px 0px;
-    background-image: url('../dist/img/backgrounds/magicoon-header-icons.png');
+    background-image: url('./img/backgrounds/magicoon-header-icons.svg');
     background-repeat: no-repeat;
     background-position: center;
     
@@ -98,6 +179,14 @@ ul{
     .hero h1{
         line-height: 70px;
     }
+
+    @media screen and (max-width: 768px) {
+        .hero h1{
+            line-height: 56px;
+        }
+    }
+   
+
     .hero p{
         line-height: 28px;
         margin: 30px 0px;
@@ -127,3 +216,24 @@ ul{
     
    
 /* hero section end */
+
+/* ############################################## */
+#show_sec{
+
+}
+#show_sec .container .content{
+    gap: 42px;
+    padding: 45px;
+}
+
+#show_sec .item{
+    /* padding: 30px; */
+    gap: 30px;
+}
+.figma_item_icon{
+    min-width: 270px;
+    padding: 30px;
+}
+.item_title_num{
+    font-size: 38px;
+}

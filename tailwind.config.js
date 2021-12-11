@@ -7,21 +7,19 @@ module.exports = {
   theme: {
    
     extend: {
+      screens: {
+        'sm': '768px',
+        'md': '992px',
+        'lg': '1200px',
+        'xl': '1200px',
+        '2xl': '1200px'
+      },
+   
  
       fontFamily: {
         mainFont: "Poppins"
       },
-      container: {
-        center: true,
-
-        // padding: {
-        //   // DEFAULT: '1rem',
-        //   sm: '0px 98px',
-        //   lg: '0px 98px',
-        //   xl: '0px 98px',
-        //   '2xl': '0px 98px',
-        // },
-      },
+  
       colors: {
         white: "#FCFCFD",
         black: "#23262F",
@@ -38,6 +36,9 @@ module.exports = {
       },
       zIndex: {
         '-1': '-1',
+      },
+      flexGrow: {
+        '3': 3
       }
     
       
@@ -47,5 +48,32 @@ module.exports = {
   variants: {
     extend: {},
   },
-  plugins: [],
+  corePlugins: {
+    container: false
+  },
+  plugins: [
+    function ({ addComponents }) {
+      addComponents({
+        '.container': {
+          margin: 'auto',
+          maxWidth: 'calc(100% - 48px)',
+          '@screen sm': {
+            maxWidth: '750px',
+          },
+          '@screen md': {
+            maxWidth: '970px',
+          },
+          '@screen lg': {
+            maxWidth: '1170px',
+          },
+          '@screen xl': {
+            maxWidth: '1170px',
+          },
+          '@screen 2xl': {
+            maxWidth: '1170px',
+          },
+        }
+      })
+    }
+  ]
 }

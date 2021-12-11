@@ -1,0 +1,53 @@
+<section id="show_sec">
+        <div class="container">
+            <div class="content bg-light_ray border-none rounded-2xl flex flex-row items-center justify-start">
+                <!-- ################################### -->
+                    <!-- items start  -->
+                <!-- ############### 1 ################ -->
+                <div class="item bg-white figma_item_icon flex-grow">
+                    <div class="icon_container  bg-light_ray ">
+                        <img src="./img/icons/figma_icon.svg" alt="">
+                    </div>
+                    <div class="item_text">
+                        <h3 class="item_title text-xl font-bold text-black">figma</h3>
+                        <span class="item_desc ">@SeyfDesigner</span>
+                    </div><!-- ./text_item -->
+                </div><!-- ./item -->
+                <!-- ############## other items ################### -->
+                <div class="other_items flex flex-row flex-grow-3 justify-between">
+                    <div class="item">
+                        <div class="icon_container" style="background-color: #F7931A;">
+                            <img src="./img/icons/icon_icon.svg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <h3 class="item_title item_title_num">360</h3>
+                            <span class="item_desc">icons</span>
+                        </div><!-- ./text_item -->
+                    </div><!-- ./item -->
+                    <!-- ############## 3 ################ -->
+                    <div class="item">
+                        <div class="icon_container" style="background-color: #01ACED;">
+                            <img src="./img/icons/download_icon.svg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <h3 class="item_title item_title_num">2.0K+</h3>
+                            <span class="item_desc">Download</span>
+                        </div><!-- ./text_item -->
+                    </div><!-- ./item -->
+                    <!-- ############## 4 ################## -->
+                    <div class="item">
+                        <div class="icon_container" style="background-color: #767DFF;">
+                            <img src="./img/icons/duplicate_icon.svg" alt="">
+                        </div>
+                        <div class="item_text">
+                            <h3 class="item_title item_title_num">2.6K+</h3>
+                            <span class="item_desc">Duplicate</span>
+                        </div><!-- ./text_item -->
+                    </div><!-- ./item -->
+                </div><!-- ./other items -->
+                <!-- ################################## -->
+                    <!-- items end  -->
+                <!-- ################################## -->
+            </div><!-- ./content -->
+        </div><!-- ./contaienr -->
+    </section>
