@@ -11,9 +11,9 @@
 </head>
 <body class="bg-white font-mainFont">
 
-    <div class="">
-        <!-- nav bar start -->
-      <nav class="desk_nav flex flex-nowrap flex-row items-center justify-between add_space">
+    <div class=""> <!-- container -->
+    <!-- desk nav bar start -->
+      <nav class=" container desk_nav flex flex-nowrap flex-row items-center justify-between add_space">
           <div class="logo">
               <img src="./img/logo.svg" alt="logo" draggable="false" class=" w-full h-full">
           </div><!-- ./logo_img -->
@@ -31,32 +31,40 @@
 
           </div><!-- ./nav_links -->
       </nav>
-      <!-- the li -->
       <div id="line_under_desk_nav" class=" bg-light_ray"></div>
-      <!-- nav bar end -->
-
+    <!-- desk nav bar end -->
+    <!-- ################################################ -->
+    <!-- hero section start -->
       <section class="hero add_space">
-        <div class="hero_content text-center relative">
+        <div class="hero_content container text-center relative">
+                <!-- white gradient over lay -->
                 <img class="white_over_lay h-full absolute top-0 left-0 right-0 bottom-0"
                 src="./img/backgrounds/gradient_hero.png" alt="" draggable="false">
-            <div class="text_content">
-                <h1 class=" text-black uppercase text-6xl font-bold ">
-                The most <br> popular icon set
-            </h1>
-            <p class="text-black capitalize text-base leading-7 font-normal">
-                Magicoon is a modern library that every designer should have, ready for instant use anytime and<br>anywhere on your projects. 
-            </p>
-            <div class="hero_download_btn bg-blue center gap-x-4 roun mx-auto cursor-pointer">
-                <img src="./img/download_icon.svg" alt="" class="donwload_btn_icon">
-                <span class=" uppercase text-white font-semibold text-sm">download</span>
-            </div><!-- ./hero_donwload_btn -->
-            <div class="other_text text-xs">
-                <span class="text-gray font-normal block">Your donation will</span>
-                <span class="text-black font-semibold">help us grow.</span>
+                <!-- the hero section text content start -->
+                <div class="text_content">
+                    <h1 class=" text-black uppercase text-6xl font-bold ">
+                    The most <br> popular icon set
+                    </h1>
+                    <p class="text-black capitalize text-base leading-7 font-normal md:px-28 lg:px-52">
+                        Magicoon is a modern library that every designer should have, ready for instant use anytime and 
+                        anywhere on your projects. 
+                    </p>
+                    <div class="hero_download_btn bg-blue hover:bg-dark_blue transition ease-in center gap-x-4 roun mx-auto cursor-pointer">
+                        <img src="./img/download_icon.svg" alt="" class="donwload_btn_icon">
+                        <span class=" uppercase text-white font-semibold text-sm">download</span>
+                    </div><!-- ./hero_donwload_btn -->
+                    <div class="other_text text-xs">
+                        <span class="text-gray font-normal block">Your donation will</span>
+                        <span class="text-black font-semibold">help us grow.</span>
+                    </div>
             </div>
-            </div>
+            <!-- the hero section text content end -->
+
         </div><!-- ./hero_content -->
       </section>
+    <!-- hero section end -->
+    <!-- ################################################ -->
+
 
 
     </div>
