@@ -1,0 +1,95 @@
+/* import the main font of the pages 
+    font name = Poppins
+*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.add_space{
+    padding: 0px 98px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+ul{
+    list-style: none;
+}
+.desk_nav{
+    height: 100px;
+}
+.nav_links ul a {
+   margin-left: 53px; 
+}
+.nav_links ul a:hover {
+    color: #23262F;
+ }
+.contact_desk_nav_btn{
+    width: 94px;
+    height: 43px;
+    margin-left: 74px;
+}
+.logo{
+    max-width: 170px;
+    height: 34px;
+}
+#line_under_desk_nav{
+    height: 1px;
+}
+.hero{
+    margin-top: 60px;
+}
+
+/* hero section start */
+.hero{
+    height: calc(100vh - 100px - 1px - 60px);
+    
+}
+.hero_content{
+    height: 100%;
+    padding: 60px 0px;
+    background-image: url('../dist/img/backgrounds/magicoon-header-icons.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    
+}
+    .hero h1{
+        line-height: 70px;
+    }
+    .hero p{
+        line-height: 28px;
+        margin: 30px 0px;
+    }
+    .hero .hero_download_btn{
+        width: 177px;
+        height: 50px;
+        border-radius: 100px;
+        margin-bottom: 30px;
+    }
+    .hero .hero_download_btn .donwload_btn_icon{
+        max-width: 20px;
+        max-height: 14px;
+    }
+    .other_text span{
+        margin-bottom: 6px;
+    }
+    .hero .text_content{
+        position: absolute;
+        width: 100%;
+        left: 50%;
+
+        transform: translate(-50%,0%);
+    }
+
+    
+   
+/* hero section end */
