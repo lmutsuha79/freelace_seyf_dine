@@ -25,55 +25,13 @@
 }
 
 
-.container{
-    /* background-color: lightgreen; */
-}
-/* bigger than 1200px large devices */
- /* @media screen and (max-width: 1220px) {
-    .container{
-        max-width: 1170px;
-    }
-}
 
-@media screen and (max-width: 992px) {
+
+/* @media screen and (max-width: 992px) {
     .container{
         max-width: 970px;
     }
-}
-@media screen and (max-width: 769px) {
-    .container{
-        max-width: 750px;
-    }
 } */
-/* @media screen and (max-width: 768px) {
-    .container{
-        max-width: 750px;
-    }
-} */
-/*
-@media screen and (max-width: 1024px) {
-    .container{
-        max-width: calc(100% - 48px);
-    }
-} */
-/* h position in tablet and small pc screan less than 1024px bigger than 768px*/
-/* @media screen and (min-width:769px) and  (max-width:1023px) {
-    .container{
-        background-color: yellowgreen;
-    }
-} */
-/* under 768px (tablet and mobile) */
-/* @media screen and (max-width: 1024px) {
-    .container{
-        padding: 0 24px;
-    }
-} */
-
-
-
-.add_space{
-    /* padding: 0px 98px; */
-}
 
 
 .center{
@@ -83,7 +41,7 @@
 }
 
 
-a{
+/* a{
     text-decoration: none;
 }
 a:active, a:focus {
@@ -92,25 +50,31 @@ a:active, a:focus {
 }
 ul{
     list-style: none;
-}
-header{
+} */
+
+/* ################################## */
+
+#nav_header{
     height: 101px;  
 }
 @media screen and (max-width: 768px) {
-    header{
+    #nav_header{
         height: 100vh;
     }
 }
+/* ####################################### */
+/* mobile nav start */
 .mobile_nav{
     
 }
 .mobile_nav header{
     height: 75px;
 }
-.mobile_nav .page_links{
+.mobile_nav .page_links, .mobile_nav .social_links{
     padding: 60px 0px;
     gap: 30px;
 }
+    /* style for page_links in the mobile nav */
 @layer components{
     .mobile_nav .page_links a {
         @apply text-sm font-semibold text-gray hover:text-black transition-colors ease-in capitalize;
@@ -119,11 +83,7 @@ header{
         @apply text-black;
     }
 }
-
-.mobile_nav .social_links{
-    padding: 60px 0px;
-    gap: 30px;
-}
+    /* style for page_links in the desk nav */
 
 @layer components{
     .mobile_nav .social_links a {
@@ -136,15 +96,18 @@ header{
 .mobile_nav .social_links li:hover path{
     fill:#3772FF;
 }
+/* mobile nav end */
+/* ################################## */
 
+/* desk nav start */
 
 .desk_nav{
     height: 100px;
 }
-.nav_links ul a {
+.nav_links ul> a {
    margin-left: 53px; 
 }
-.nav_links ul a:hover {
+.nav_links ul >a:hover {
     color: #23262F;
  }
 .contact_desk_nav_btn{
@@ -159,62 +122,60 @@ header{
 #line_under_desk_nav{
     height: 1px;
 }
-.hero{
-    margin-top: 60px;
-}
+/* desk nav end  */
 
+/* ##################################### */
 /* hero section start */
 .hero{
+    margin-top: 60px;
     height: calc(100vh - 100px - 1px - 60px);
-    
 }
 .hero_content{
     height: 100%;
     padding: 60px 0px;
     background-image: url('./img/backgrounds/magicoon-header-icons.svg');
     background-repeat: no-repeat;
-    background-position: center;
-    
+    background-position: center;   
 }
+.hero h1{
+    line-height: 70px;
+}
+.hero p{
+    line-height: 28px;
+    margin: 30px 0px;
+}
+
+@media screen and (max-width: 768px) {
     .hero h1{
-        line-height: 70px;
+        line-height: 56px;
     }
-
-    @media screen and (max-width: 768px) {
-        .hero h1{
-            line-height: 56px;
-        }
-    }
-   
-
     .hero p{
-        line-height: 28px;
-        margin: 30px 0px;
+        line-height: 26px;
     }
-    .hero .hero_download_btn{
-        width: 177px;
-        height: 50px;
-        border-radius: 29px;
-        margin-bottom: 30px;
-    }
-    .hero .hero_download_btn .donwload_btn_icon{
-        max-width: 20px;
-        max-height: 14px;
-    }
-    .other_text span{
-        margin-bottom: 6px;
-    }
-    .hero .text_content{
-        position: absolute;
-        width: 100%;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%,calc(-50% - 60px));
-
-    }
-
-    
    
+}
+
+.hero .hero_download_btn{
+    width: 177px;
+    height: 50px;
+    border-radius: 29px;
+    margin-bottom: 30px;
+}
+.hero .hero_download_btn .donwload_btn_icon{
+    max-width: 20px;
+    max-height: 14px;
+}
+.other_text span{
+    margin-bottom: 6px;
+}
+.hero .text_content{
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,calc(-50% - 60px));
+
+}
 /* hero section end */
 
 /* ############################################## */
