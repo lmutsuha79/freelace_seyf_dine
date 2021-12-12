@@ -25,6 +25,7 @@ module.exports = {
         black: "#23262F",
         gray: "#777E90",
         light_ray: "#E6E8EC",
+        super_light_gray: "#F4F5F6",
         blue: "#3772FF",
         dark_blue: "#0045EA",
         border_color_green: "#00D3A1",
@@ -54,6 +55,7 @@ module.exports = {
   plugins: [
     function ({ addComponents }) {
       addComponents({
+        // extra small devices less than 768px
         '.container': {
           margin: 'auto',
           maxWidth: 'calc(100% - 48px)',

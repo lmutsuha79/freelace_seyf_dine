@@ -51,3 +51,75 @@
             </div><!-- ./content -->
         </div><!-- ./contaienr -->
     </section>
+
+
+
+
+######################################
+
+
+ <!-- mobile nav start -->
+        <nav class="mobile_nav sm:hidden w-full bg-white">
+            <header class="container flex flex-row justify-between items-center">
+                <div class="logo">
+                    <img src="./img/logo.svg" alt="logo" draggable="false" class=" w-full h-full">
+                </div><!-- ./logo_img -->
+                <div id="mb_av_btn" class="w-5 h-4 cursor-pointer">
+                    <svg class="fill-[#23262f] hover:fill-[#777E90] hover_transition" xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
+                        <path class="" id="menu-Bold_1_" d="M225,1823a1,1,0,0,0-1-1H211a1,1,0,0,0,0,2h13A1,1,0,0,0,225,1823Zm-19,6h18a1,1,0,0,1,0,2H206a1,1,0,0,1,0-2Zm9,7h9a1,1,0,0,1,0,2h-9a1,1,0,0,1,0-2Z" transform="translate(-205 -1822)"/>
+                    </svg>
+                      
+                </div><!-- ./mb_nav_btn -->
+            </header>
+            <div class="line_under_nav" class=" bg-light_ray"></div>
+
+            <main class="">
+                <div class="mobile_nav_content container">
+                    <div class="page_links flex flex-col">
+                        <a href="#">start</a>
+                        <a href="#">abou</a>
+                        <a href="#">foramts</a>
+                        <a href="#">download</a>
+                        <a href="#">contact</a>
+                    </div><!-- ./page_links -->
+                    <div class="line_under_nav" class=" bg-light_ray"></div>
+                    
+                    <ul class="social_links page_links flex flex-col hover_transition">
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
+                            </svg>
+                            <!-- <img src="./img//icons/arrow_icon.svg" alt=""> -->
+                            <a href="#">twitter</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
+                            </svg>
+                            <a href="#">instagram</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
+                            </svg>
+                            <a href="#">drible</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
+                            </svg>
+                            <a href="#">behance</a>
+                        </li>
+                        <li>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
+                            </svg>
+                            <a href="#">figma</a>
+                        </li>
+
+                    </ul><!-- ./social_links -->
+                </div><!-- ./mobile_nav_content -->
+            </main>
+        </nav>
+        <!-- mobile nav end -->
+    <!-- ############################################################## -->

@@ -8,21 +8,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@layer components{
-    .item{
-        @apply flex flex-row items-center rounded-2xl;
-    }
-    .icon_container{
-        @apply w-12 h-12 rounded-full grid place-content-center
-    }
-    .item_title_num{
-        @apply font-semibold text-black;
-        
-    }
-    .item_desc{
-        @apply text-sm font-semibold text-gray block -mt-1
-    }
-}
+
 
 
 
@@ -33,82 +19,74 @@
     }
 } */
 
-
+h3{
+    letter-spacing: 2px;
+}
 .center{
     display: flex;
     justify-content: center;
     align-items: center;
 }
+@layer components{
+    .hover_transition{
+        @apply transition ease-in
+    }
+   
+}
 
 
-/* a{
-    text-decoration: none;
+
+@layer components{
+    .grid_system{
+        @apply grid grid-cols-12
+    }
 }
-a:active, a:focus {
-  outline: 0;
-  border: none;
-}
-ul{
-    list-style: none;
-} */
+    
+    
+    
+
+
+
+
 
 /* ################################## */
 
 #nav_header{
     height: 101px;  
 }
-@media screen and (max-width: 768px) {
-    #nav_header{
-        height: 100vh;
-    }
-}
-/* ####################################### */
-/* mobile nav start */
-.mobile_nav{
-    
-}
-.mobile_nav header{
-    height: 75px;
-}
-.mobile_nav .page_links, .mobile_nav .social_links{
-    padding: 60px 0px;
-    gap: 30px;
-}
-    /* style for page_links in the mobile nav */
-@layer components{
-    .mobile_nav .page_links a {
-        @apply text-sm font-semibold text-gray hover:text-black transition-colors ease-in capitalize;
-    }
-    .mobile_nav .page_links a:first-child {
-        @apply text-black;
-    }
-}
-    /* style for page_links in the desk nav */
-
-@layer components{
-    .mobile_nav .social_links a {
-        @apply text-sm font-semibold text-black hover:text-gray  capitalize;
-    }
-    .mobile_nav .social_links  li {
-        @apply  flex flex-row items-center gap-4;
-    }  
-}
-.mobile_nav .social_links li:hover path{
-    fill:#3772FF;
-}
-/* mobile nav end */
-/* ################################## */
-
-/* desk nav start */
-
 .desk_nav{
     height: 100px;
 }
+.line_under_nav{
+    height: 1px;
+}
+@media screen and (max-width: 768px) {
+    #nav_header{
+        height: 76px;
+    }
+    #nav_header .logo{
+        max-width: 115px;
+        max-height: 23px;
+    }
+    .desk_nav{
+        height: 75px;
+    }
+   
+
+}
+/* ##################################### */
+
+
+/* desk nav start */
+
+
+
 .nav_links ul> a {
    margin-left: 53px; 
 }
 .nav_links ul >a:hover {
     color: #23262F;
+    /* transtion for a is in general style  */
  }
 .contact_desk_nav_btn{
     width: 94px;
@@ -124,11 +102,60 @@ ul{
 }
 /* desk nav end  */
 
-/* ##################################### */
+
+/* ####################################### */
+/* mobile nav start */
+#mb_nav{
+    height: calc(100vh - 76px);
+    transition: transform 0.2s ease-out;
+    overflow-y: scroll;
+}
+
+
+
+
+
+#mb_nav header{
+    height: 75px;
+}
+#mb_nav .page_links, #mb_nav .social_links{
+    padding: 60px 0px;
+    gap: 30px;
+}
+@layer components{
+    #mb_nav .page_links a {
+        @apply text-sm font-semibold text-gray hover:text-black transition-colors ease-in capitalize;
+    }
+    #mb_nav .page_links a:first-child {
+        @apply text-black;
+    }
+}
+
+@layer components{
+    #mb_nav .social_links a {
+        @apply text-sm font-semibold text-black hover:text-gray  capitalize;
+    }
+    #mb_nav .social_links  li {
+        @apply  flex flex-row items-center gap-4;
+    }  
+}
+#mb_nav .social_links li:hover path{
+    fill:#3772FF;
+}
+/* mobile nav end */
+/* ################################## */
+
+
 /* hero section start */
 .hero{
-    margin-top: 60px;
+    margin-top: calc(101px + 60px);
     height: calc(100vh - 100px - 1px - 60px);
+}
+@media screen and (max-width: 768px) {
+    .hero{
+        margin-top: calc(76px + 80px);
+        height: calc(100vh - 75px - 1px - 80px);
+    }
 }
 .hero_content{
     height: 100%;
@@ -179,22 +206,229 @@ ul{
 /* hero section end */
 
 /* ############################################## */
-#show_sec{
+
+section.about{
 
 }
-#show_sec .container .content{
-    gap: 42px;
-    padding: 45px;
+
+.icon_container{
+
 }
 
-#show_sec .item{
-    /* padding: 30px; */
+section.about .box{
+
+}
+
+@layer components{
+    .box_item{
+        @apply flex flex-row items-center rounded-2xl
+        col-span-12 sm:col-span-6 lg:col-span-3;
+    }
+    .icon_container{
+        @apply w-12 h-12 rounded-full grid place-content-center
+    }
+    .item_title_num{
+        @apply font-semibold text-black;
+        
+    }
+    .item_desc{
+        @apply text-sm font-semibold text-gray block -mt-1
+    }
+}
+.box_item{
     gap: 30px;
+    padding: 35px 30px;
 }
-.figma_item_icon{
-    min-width: 270px;
-    padding: 30px;
+
+.box_item_figma:hover .icon_container{
+    background-color: #FCFCFD;
+
+}
+.box_item_figma:hover .item_text h3{
+    color: #FCFCFD;
+    
+}
+.box_item_figma .item_text h3{
+    font-size: 28px;
+    
 }
 .item_title_num{
     font-size: 38px;
+}
+@media screen and (max-width:768px) {
+    .box_item .item_text h3{
+        font-size: 28px;
+    }
+    .box_item_figma .item_text h3{
+        font-size: 24px;
+        
+    }
+    .box_item{
+        gap: 24px;
+        padding: 30px;
+    }
+    #about .grid_system{
+        row-gap: 32px;
+    }
+}
+
+/* ################ */
+/* about text */
+
+
+@layer components{
+    .about_text,.icons_styles{
+        @apply text-center  sm:px-20 xl:px-48
+        
+    }
+    .about_text h3{
+        @apply text-black font-bold uppercase mb-8
+    }
+    .about_text p{
+        @apply text-black font-normal text-sm capitalize
+
+    } 
+}
+
+.about_text h3{
+    font-size: 28px;
+}
+.about_text p{
+   line-height: 26px;
+}
+
+
+
+
+.line_between_text{
+    width: 1px;
+    height: 60px;
+    margin: 60px auto;
+}
+
+.icons_360_text h3{
+    font-size: 45px;
+}
+.icons_360_text p{
+    margin-bottom: 45px;
+}
+
+@media screen and (max-width:768px) {
+   .icons_360_text h3{
+       font-size: 38px;
+   }
+}
+
+
+/* ################## */
+.icons_styles{
+    
+}
+
+@layer components{
+    .icons_styles .item{
+        @apply col-span-6 sm:col-span-3 flex flex-col items-center
+    }
+    .icons_styles .item .box{
+        @apply bg-blue hover:bg-dark_blue
+        rounded-2xl grid place-content-center gap-4
+    }
+    .icons_styles .item .box svg{
+        @apply w-12 h-12 fill-[#fcfcfd]
+    }
+    .icons_styles .item .box span{
+        @apply capitalize text-sm font-semibold text-white
+    }
+    .icon_px{
+        @apply capitalize border-2 border-light_ray font-semibold text-xs
+    }
+}
+
+.icons_styles .item .box{
+    width: 120px;
+    height: 120px;      
+    margin-bottom: 25px; 
+}
+.icon_px{
+    border-radius: 20px;
+    /* width: 70px;
+    height: 35px; */
+    padding: 10px 23px;
+}
+
+
+/* ######################################## */
+
+.formats{
+
+}
+
+.downforamts_box .box{
+    padding: 90px 60px 90px 45px;
+    gap: 30px;
+}
+.downforamts_box .box .text_content div:first-child span:first-child{
+    width: 30px;
+    height: 1px;
+}
+.downforamts_box .box .text_content h3{
+    font-size: 45px;
+    line-height: 60px;
+    
+}
+.formats .box .text_content div:nth-child(2){
+    padding-left: 55px;
+
+}
+
+.formats .box .icons_content{
+    gap: 26px;
+}
+@layer components {
+    .downforamts_box .box .text_content ul li {
+        @apply flex items-center gap-5 pb-5
+    }
+    .formats .box .icons_content .item{
+        @apply col-span-6 bg-white rounded-2xl flex flex-col md:flex-row gap-4 sm:gap-5 items-center p-6 
+    }
+    .formats .box .icons_content .item .icon_container{
+        @apply bg-super_light_gray  w-14 h-14
+    }
+    .formats .box .text{
+        @apply text-center md:text-left
+    }
+    .formats .box .icons_content .item .text span:first-child{
+        @apply uppercase font-semibold text-base sm:text-lg text-black block
+    }
+    .formats .box .icons_content .item .text span:nth-child(2){
+        @apply capitalize font-semibold text-gray text-sm
+    }
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .downforamts_box .box{
+        padding: 48px 16px;
+        /* gap: 30px; */
+    }
+    .downforamts_box .box .text_content div:nth-child(2){
+        padding-left: 0px;
+    
+    }
+
+    .downforamts_box .box .text_content h3{
+        font-size: 38px;
+        line-height: 56px;
+        
+    }
+    .formats .box .icons_content{
+        gap: 15px;
+    }
+}
+
+
+#download .donwload_btn {
+    width: 232px;
+    height: 85px;
 }
