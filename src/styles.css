@@ -432,3 +432,128 @@ section.about .box{
     width: 232px;
     height: 85px;
 }
+
+/* ################### */
+/* slider start */
+.slider{
+    padding: 60px 45px 30px 45px;  
+}
+@layer components{
+    .slider .slide_contorler .bolets_container div{
+        @apply bg-white hover:bg-blue border-1 border-light_ray  rounded-full cursor-pointer
+    }
+}
+.slider .slide_content{
+    max-width: 480px;
+    max-height: 248px;
+}
+
+.slider .slide_contorler{
+    margin-top: 30px;
+}
+.slider .slide_contorler .bolets_container div{
+    width: 10px;
+    height: 10px;
+}
+.slider .slide_contorler .bolets_container div.active{
+    background-color: #3772FF;
+    border: 0px;
+}
+
+.slide_content{
+    overflow-x: hidden;
+    height: 248px;
+}
+.user_view_port{
+    display: flex;
+    width: 600%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.slide_content .user_view_port >div{
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+
+/* ########################################## */
+/* footer */
+
+@layer components {
+    
+    footer .footer_container >div{
+        @apply col-span-12  sm:col-span-6
+    }
+    footer .footer_container .footer_links >div{
+        @apply col-span-12  sm:col-span-6
+    }
+
+    footer .footer_title{
+        @apply text-sm font-bold  text-black uppercase
+    }
+    footer a, footer p {
+        @apply capitalize
+    }
+    footer .footer_container a, footer .footer_container span,
+    footer .footer_container p{
+        @apply text-sm font-normal leading-7
+    }
+    footer a{
+        @apply hover:text-gray
+    }
+    footer .footer_container ul {
+        @apply flex flex-col items-baseline gap-5
+    }
+    footer .footer_container ul li {
+        @apply flex items-center gap-4
+    }
+
+    footer .social_links ul li {
+        @apply items-baseline
+    }
+    footer .social_links ul li div span{
+        @apply block
+    }
+
+    
+}
+
+footer{
+
+}
+
+footer .footer_container{
+}
+.footer_title{
+    margin-bottom: 46px;
+}
+@media screen and (min-width: 768px) {
+    footer .footer_container >div{
+        padding-top: 60px;
+        padding-bottom: 60px;
+    }
+    .footer_subscription{
+        padding-left: 100px;
+    }
+    .footer_title{
+        margin-bottom: 46px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer_title{
+        margin-bottom: 25px;
+    }
+}
+
+
+
+.last_footer{
+
+}
+
+
+/* ########################################## */
