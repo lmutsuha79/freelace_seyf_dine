@@ -13,11 +13,9 @@
 
 
 
-/* @media screen and (max-width: 992px) {
-    .container{
-        max-width: 970px;
-    }
-} */
+html{
+    scroll-behavior: smooth;
+}
 
 h3{
     letter-spacing: 2px;
