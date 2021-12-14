@@ -470,6 +470,8 @@ section.about .box{
     height: 100%;
     justify-content: center;
     align-items: center;
+    /* transition form the js */
+    /* transition: transform 0.2s ease; */
 }
 .slide_content .user_view_port >div{
     width: 100%;
@@ -477,6 +479,7 @@ section.about .box{
     
 
 }
+
 
 
 /* ########################################## */
@@ -551,9 +554,20 @@ footer .footer_container{
 
 
 
-.last_footer{
+.footer_send_mail{
 
 }
+.footer_send_mail form{
+    /* width: 370px; */
+    height: 50px;
+}
+.footer_send_mail form input{
+    border: none;
+    outline: none;
+    width: 90%;
+}
+
+
 
 
 /* ########################################## */

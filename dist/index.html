@@ -8,6 +8,9 @@
     <!-- css start -->
         <link rel="stylesheet" href="output.css">
     <!-- css end -->
+
+    
+
 </head>
 
 
@@ -406,20 +409,47 @@
             <div id="slider" class="slider hidden sm:block mt-8 md:mt-0  sm:col-span-6 bg-super_light_gray rounded-2xl">
                 <div class="slide_content">
                     <div class="user_view_port">
-                        <img src="./img//slide/icons-light@2x.svg" alt="" class="w-full h-full">
-                        <!-- <div class="slide_item foure bg-blue">foure</div>
-                        <div class="slide_item one bg-black">one</div>
-                        <div class="slide_item two bg-red-500">two</div>
-                        <div class="slide_item tree bg-green">tree</div>
-                        <div class="slide_item foure bg-blue">foure</div>
-                        <div class="slide_item one bg-black">one</div> -->
+                        <!-- make this copy of fist and last item to 
+                            make slid loop
+                        -->
+                        <!-- (copy of fourth item) -->
+                        <div class="slide_item foure">
+                            <img src="./img//slide/magicoon-solid.png" alt="" class="w-full h-full">
 
+                        </div>
+
+                        <div class="slide_item one">
+                            <img src="./img//slide/magicoon-light.png" alt="" class="w-full h-full">
+                        </div>
+                        <div class="slide_item two">
+                            <img src="./img/slide/magicoon-regular.png" alt="" class="w-full h-full">
+
+                        </div>
+                        <div class="slide_item tree">
+                            <img src="./img//slide/magicoon-bold.png" alt="" class="w-full h-full">
+
+                        </div>
+                        <div class="slide_item foure">
+                            <img src="./img//slide/magicoon-solid.png" alt="" class="w-full h-full">
+
+                        </div>
+
+                        <!-- (copy of first item) -->
+                        <div class="slide_item one">
+                            <img src="./img//slide/magicoon-light.png" alt="" class="w-full h-full">
+
+                        </div>
                     </div>
+
+                  
+
                 </div>
                 <div class="slide_contorler bg-white flex items-center justify-between rounded-2xl py-5 px-8">
-                    <span class="text-black text-sm font-normal">90 icons (Light Style)</span>
+                    <span class="text-black text-sm font-normal">90 icons (
+                        <span id="slider_icons_title">light</span>
+                        )</span>
                     <div class="bolets_container flex gap-2">
-                        <div class=""></div>
+                        <div></div>
                         <div></div>
                         <div></div>
                         <div></div>
@@ -540,8 +570,15 @@
                 <p>
                     Stay close and subscribe to our website to receive the latest and newest updates on our icons. 
                 </p>
-                <div class="footer_send_mail">
-                    <form action=""></form>
+                <div class="footer_send_mail  lg:pr-14 mt-5 mb-5 sm:mb-11">
+                    <form action="" class=" border-2 border-light_ray rounded-3xl">
+                        <div class="form_container flex h-full justify-between items-center pr-2 pl-6">
+                            <input type="email" placeholder="Your Email.." class=" placeholder-gray caret-gray text-sm text-black font-normal">
+                            <button type="submit" class="bg-blue hover:bg-dark_blue hover_transition w-8 h-8 grid place-content-center rounded-full">
+                                <img src="./img/icons/arrow_right.png" alt="">
+                            </button>
+                        </div>
+                    </form>
 
                 </div>
                 <h4 class=" mt-6 mb-5 sm:mb-5 sm:mt-11 font-bold text-black text-sm">Email</h4>
@@ -580,6 +617,12 @@
     }
 
     // slider code start
+
+    const slider_timer = 2000;
+
+    const slider_icons_title = document.getElementById('slider_icons_title');
+    const slider_icons_title_list = ['light', 'regular', 'bold', 'solid']
+
     const slider = document.getElementById('slider');
     const user_view_slide_port = document.querySelector('.slider .user_view_port');
     const slider_bolets = document.querySelectorAll('.slider .bolets_container  div ');
@@ -587,7 +630,12 @@
     const slide_items = document.querySelectorAll('.slide_item');
     // number of items in the slider:
     const slide_items_num = slide_items.length;
+    const bolet_items_num = slide_items_num - 2;
+    // number of slider bullets controler = num of slide items - 2
+    // so last index of items bullets = slide_items_num - 3
+
     let slide_items_size = slide_items[0].clientWidth;
+    window.addEventListener('resize',update_slide_items_size);
     function update_slide_items_size(){
         
         // update the slide items size every time the windows  size change
@@ -595,29 +643,195 @@
 
         slide_items_size = slide_items[0].clientWidth;
     }
-    
-    window.addEventListener('resize',update_slide_items_size);
+
+
     // starting with the index 1 not 0 because index 0 = last item (copy)
-    let active_slide_item_index  = 1;
-    select_bolet_style()
-    function select_bolet_style(){
-        // -1 because active slide item start at index 1 but his pointer 
-        // in the bolets start in index 0
-        slider_bolets[active_slide_item_index - 1].classList.add('active');
-        if(active_slide_item_index > 1){
-            slider_bolets[active_slide_item_index - 1 - 1].classList.remove('active');
+    let active_slide_index  = 0;
+    next()
+    function next(){
+        if (active_slide_index === 0){
+            user_view_slide_port.style.transition = 'transform 0.2s ease';
+            // remove the style from last items in slide control
+//            slider_bolets[slide_items_num -  3].classList.remove('active');
+
+        }
+        
+        active_slide_index ++; // = 1
+        user_view_slide_port.style.transform = `translateX(-${slide_items_size  * active_slide_index}px)`;
+        if(active_slide_index > 1){
+//            slider_bolets[active_slide_index -  2].classList.remove('active');
+        }
+//        slider_bolets[active_slide_index -  1].classList.add('active');
+
+        if(active_slide_index === 4){
+            setTimeout(function(){
+                user_view_slide_port.style.transition = 'none';
+                user_view_slide_port.style.transform = `translateX(0px)`;
+                active_slide_index = 0;
+           }, 300);
+        }
+        if(active_slide_index === 5){
+            active_slide_index = 0;
+            next();
         }
 
+        bollets_style()
+    }
+    
+    function prev(){
+        if(active_slide_index === 4){
+            user_view_slide_port.style.transition = 'transform 0.2s ease';
+        }
+        active_slide_index --;
+        user_view_slide_port.style.transform = `translateX(-${slide_items_size  * active_slide_index}px)`;
+        if(active_slide_index === 0){
+            setTimeout(function(){
+                user_view_slide_port.style.transition = 'none';
+                active_slide_index = 4
+                user_view_slide_port.style.transform = `translateX(-${slide_items_size  * active_slide_index}px)`;
+            },300);
+        }
+        bollets_style();
     }
 
-    function slide_next(){
-        user_view_slide_port.style.transform = `translateX(-${slide_items_size * active_slide_item_index}px)`;
-        if (active_slide_item_index  < (slide_items_num - 1)) active_slide_item_index ++;
-        else {
-            
+    var active_bolet_index;
+    function bollets_style(){
+        if (active_slide_index === 0){
+            active_bolet_index = bolet_items_num - 1; // 4 - 1 = 3
         }
-        select_bolet_style()
+        else{
+            active_bolet_index = active_slide_index - 1;  
+        }
+
+        slider_bolets.forEach((item,index)=>{
+            if(index === active_bolet_index){
+                slider_bolets[index].classList.add('active');
+            }
+            else{
+                slider_bolets[index].classList.remove('active');
+            }
+        });
+
+
+       
+
+        
     }
+    
+    // add event lestener for Each item in the slider bolets
+    slider_bolets.forEach((item,index)=>{
+        item.onclick = function(){
+            active_slide_index = index + 1;
+            user_view_slide_port.style.transform = `translateX(-${slide_items_size  * active_slide_index}px)`;
+            bollets_style();
+            slider_icon_title_change();
+        }
+    });
+    
+    var auto_slide = true;
+    function slider_icon_title_change(){
+        slider_icons_title.innerText = slider_icons_title_list[active_bolet_index];
+
+    }
+    setInterval(()=>{
+        if(auto_slide) {
+            next();
+            slider_icon_title_change();
+        }
+
+    },slider_timer);
+
+    slider.addEventListener("mouseenter",() => auto_slide = false);
+    slider.addEventListener('mouseleave',() => auto_slide = true);
+
+    var drag_start,drag_end;
+
+    // drag for pc :
+    slider.addEventListener('dragstart', (s) => {
+        drag_start = s.clientX;
+    });
+
+    slider.addEventListener('dragend', (e) => {
+        drag_end = e.clientX;
+        if (drag_end - drag_start < 0) {
+            // drag fronm right to left
+            next();
+        }
+        if(drag_end - drag_start > 0){
+            // drag from left to right
+            prev();
+        }
+    
+    });
+
+
+    // swip for touch devices:
+
+    slider.addEventListener('touchstart', (e) => {
+        drag_start = e.touches[0].clientX;
+    });
+    
+    slider.addEventListener('touchend', (e) => {
+        drag_end = e.changedTouches[0].clientX;
+        if (drag_end - drag_start < 0) {
+            // stop the auto slid if user use touch screen and swip the slid
+            auto_slide = false;
+            // swip from right to left
+            next();
+        }
+        if(drag_end - drag_start > 0){
+            // stop the auto slid if user use touch screen and swip the slid
+            auto_slide = false;
+            // swip from left to right
+            prev();
+        }
+        else{
+            //drag_end = drag_start == no move;
+            // make the slider move auto 
+            auto_slide = true;
+        }
+    
+    });
+    
+
+    // مميزات السلايد و طريقة عمله :
+    /*
+        هذا السلايد تم بناءه من الصفر ب جافا سكربت و حدها دون استعمال أي مكتبات خارجية او اضافات
+        *********************************************************************************
+        السلايد يتكون من دوال مهم هي
+        دالة التقدم للأمام next()
+        دالة الرجوع للخلف prev()
+        دالة تغيير الستاليل المطبق على دوائر التحكم أسفل السلايد 
+        دالة تقوم بتحديث حجم الانتقال حيث تقوم بتحديث حجم الانتقال بين عناصر السلايد برجوع لحجم 
+        العنصر الأول و تستدعي هته الدالة نفسها كلما تغيرت حجم الشاشة 
+        أي أن السلايد لن  يتأثر بتغيير المستخدم لحجم  الشاشة بدون الإضطرار لاعادة تحميل الصفحة
+        كما أن للسلايد قابلية لتحكم به عن طريق السحب ليمين واليسار اما من الكمبيوتر او شاشة اللمس
+        و أيضا يمكن أن يتوثف السلايد عن العمل الأوتوماتيكي لما تقف فوقه بالماوس ويعود لما تخرج  من منطقة السلايد
+        ليكمل عمله 
+        و ايضا لما تعمل انتقال عن طريق اللمس في شاشات اللمس و يعود للعمل لما تعاود الضغط فوقه
+        عنوان السلايد يتغير كلما تم الانتقال لعنصر جديد و هذا اعتماد على 
+        LIST 
+        موضوعة فوق مرتب بها عناوين 
+        *********************************************************************************
+
+        #########################  ملاحظات مهمة #####################################
+        1* 
+        السلايد يعتمد على وجود 4 عناصر فيه اضافة ل 2 تكون نسخ لاول و أخر عنصر توضع بعكس ترتيبها 
+        يعني نسخة الأهيرة تكون هي أول عنصر و نسخة الأولى  تكون هي أخر عنصر 
+        اي هناك 6 عناصر 
+        
+        *2 
+        قائمة عناوين الأيقونات الموجودة فوق يجب ن توضع بالترتيب الصحيح 
+
+        3* 
+        يمكن تغير سرعة تمرير السلايد من المتغير الموضوع فوق لكن انتبه للوحدة لانه موضوع ليتعامل مع الأجزاء من  الألف من الثانية 
+        يعني 
+        1s == 1000
+        ولا تضع وحدة او اي شيء فقط ارقام
+        ولا يجب أن يقل الرقم عن 600 جزء من الثانية والى لن يعمل السلايد بصورة  مناسبة 
+        الا لو تم تغيير بعض القيم في السلايد بشكل يدوي مرة  اخرى
+
+    */
 
     // slider code end 
 </script>
