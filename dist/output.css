@@ -1409,6 +1409,12 @@ h3{
 
 /* ####################################### */
 /* mobile nav start */
+
+.hide_nav_btn{
+    display: none;
+
+}
+
 #mb_nav{
     height: calc(100vh - 76px);
     transition: transform 0.2s ease-out;
@@ -1745,39 +1751,42 @@ footer .footer_container{
 /* ########################################## */
 
 
+/* @media screen and(min-width: 768px) {
+    section{
+        padding-top: 101px;
+        background-color: red;
+    }
+    body{
+        background-color: red;
+    }
+} */
 
 
+section{
+    margin-top: 101px;
+}
+@media screen and (max-width: 768px) {
+    section{
+        margin-top: 76px;
+
+    }
+    
+}
 .hover\:bg-black:hover{
 	--tw-bg-opacity: 1;
 	background-color: rgba(35, 38, 47, var(--tw-bg-opacity));
 }
-
-
-
-
 .hover\:bg-dark_blue:hover{
 	--tw-bg-opacity: 1;
 	background-color: rgba(0, 69, 234, var(--tw-bg-opacity));
 }
-
-
-
-
 .hover\:fill-\[\#777E90\]:hover{
 	fill: #777E90;
 }
-
-
-
-
 .hover\:text-white:hover{
 	--tw-text-opacity: 1;
 	color: rgba(252, 252, 253, var(--tw-text-opacity));
 }
-
-
-
-
 @media (min-width: 768px){
     .sm\:grid_system{
 		display: grid;
@@ -1835,10 +1844,6 @@ footer .footer_container{
 		line-height: 1.5rem;
 	}
 }
-
-
-
-
 @media (min-width: 992px){
     .md\:grid_system{
 		display: grid;
@@ -1854,10 +1859,6 @@ footer .footer_container{
 		padding-right: 7rem;
 	}
 }
-
-
-
-
 @media (min-width: 1200px){
 
 
@@ -1871,3 +1872,4 @@ footer .footer_container{
 		padding-right: 3.5rem;
 	}
 }
+

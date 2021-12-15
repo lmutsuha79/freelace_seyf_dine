@@ -103,6 +103,12 @@ h3{
 
 /* ####################################### */
 /* mobile nav start */
+
+.hide_nav_btn{
+    display: none;
+
+}
+
 #mb_nav{
     height: calc(100vh - 76px);
     transition: transform 0.2s ease-out;
@@ -569,3 +575,27 @@ footer .footer_container{
 
 
 /* ########################################## */
+
+
+/* @media screen and(min-width: 768px) {
+    section{
+        padding-top: 101px;
+        background-color: red;
+    }
+    body{
+        background-color: red;
+    }
+} */
+
+
+section{
+    margin-top: 101px;
+}
+@media screen and (max-width: 768px) {
+    section{
+        margin-top: 76px;
+
+    }
+    
+}
+
