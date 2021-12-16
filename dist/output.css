@@ -1522,6 +1522,12 @@ h3{
         height: calc(100vh - 75px - 1px - 80px); */
     }
 }
+
+.white_over_lay{
+    background: rgb(252,252,253);
+    background: linear-gradient(0deg, rgba(252,252,253,0) 0%, rgba(252,252,253,1) 100%);
+}
+
 .hero_content{
     height: calc(100vh - 101px);
     display: grid;
