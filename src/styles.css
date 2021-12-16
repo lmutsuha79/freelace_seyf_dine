@@ -399,8 +399,12 @@ h3{
 }
 
 .downforamts_box .box{
-    padding: 90px 60px 90px 45px;
+    padding: 90px 0px;
     gap: 30px;
+}
+.formats .box {
+    padding-left: 45px;
+    padding-right: 60px;
 }
 .downforamts_box .box .text_content div:first-child span:first-child{
     width: 30px;
@@ -411,12 +415,12 @@ h3{
     line-height: 60px;
     
 }
-.formats .box .text_content div:nth-child(2){
+.downforamts_box .box .text_content div:nth-child(2){
     padding-left: 55px;
 
 }
 
-.formats .box .icons_content{
+.downforamts_box .box .icons_content{
     gap: 26px;
 }
 @layer components {
@@ -472,6 +476,11 @@ h3{
 /* slider start */
 .slider{
     padding: 60px 45px 30px 45px;  
+}
+@media screen and (max-width: 992px){
+    .slider{
+        padding: 60px 10px;
+    }
 }
 @layer components{
     .slider .slide_contorler .bolets_container div{
