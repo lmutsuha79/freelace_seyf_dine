@@ -76,8 +76,11 @@ h3{
 
 
 /* desk nav start */
-
-
+@layer components{
+    .activ_nav_link {
+        @apply text-black
+    }
+}
 
 .nav_links ul> a {
    margin-left: 53px; 
@@ -571,31 +574,4 @@ footer .footer_container{
     width: 90%;
 }
 
-
-
-
-/* ########################################## */
-
-
-/* @media screen and(min-width: 768px) {
-    section{
-        padding-top: 101px;
-        background-color: red;
-    }
-    body{
-        background-color: red;
-    }
-} */
-
-
-section{
-    margin-top: 101px;
-}
-@media screen and (max-width: 768px) {
-    section{
-        margin-top: 76px;
-
-    }
-    
-}
 
