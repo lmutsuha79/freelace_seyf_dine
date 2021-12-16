@@ -16,23 +16,24 @@
 
 <body class="bg-white font-mainFont">
     
-    <header id="nav_header" class="bg-white fixed top-0 left-0 right-0 z-50">
+    <header id="nav_header" class="bg-white fixed z-99 top-0 left-0 right-0">
     <!-- ############################################################## -->
         <!-- desk nav bar start -->
         <nav class="desk_nav container flex flex-nowrap flex-row items-center justify-between ">
-            <div class="logo">
+            <a class="logo" href="index.html">
                 <img src="./img/logo.svg" alt="logo" draggable="false" class=" w-full h-full">
-            </div><!-- ./logo_img -->
+            </a><!-- ./logo_img -->
 
             <div class="hidden sm:block nav_links">
-            <ul class="flex flex-nowrap flex-row items-center text-gray hover_transition capitalize font-semibold text-sm">
-                <a href="#hero" class="activ_nav_link">start</a>
-                <a href="#about">abou</a>
-                <a href="#formats">foramts</a>
-                <a href="#download">download</a>
-                <div class="contact_desk_nav_btn text-black hover:text-white hover:bg-black hover_transition border-2 border-light_ray rounded-3xl center cursor-pointer">
-                    <a href="#">contact</a>
-                </div>
+            <ul class="flex flex-nowrap flex-row items-center text-gray hover_transition  font-semibold text-sm">
+                <a href="#hero" class="activ_nav_link">Start</a>
+                <a href="#about">About</a>
+                <a href="#formats">Foramts</a>
+                <a href="#download">Download</a>
+           
+                <a href="./contact.html"
+                class="contact_desk_nav_btn grid place-content-center text-black hover:text-white hover:border-none hover:bg-black hover_transition border-2 border-light_ray rounded-3xl"
+                >Contact</a>
             </ul>
             </div><!-- ./nav_links -->
 
@@ -40,10 +41,13 @@
                 <svg id="oppen_nav_btn" class="fill-[#23262f] hover:fill-[#777E90] hover_transition" xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
                     <path class="" id="menu-Bold_1_" d="M225,1823a1,1,0,0,0-1-1H211a1,1,0,0,0,0,2h13A1,1,0,0,0,225,1823Zm-19,6h18a1,1,0,0,1,0,2H206a1,1,0,0,1,0-2Zm9,7h9a1,1,0,0,1,0,2h-9a1,1,0,0,1,0-2Z" transform="translate(-205 -1822)"/>
                 </svg>
+                <!-- <img id="oppen_nav_btn" src="./img/btns/oppen_nav_btn.svg" alt="oppen_nav"> -->
 
                 <svg id="close_nav_btn" class="hide_nav_btn fill-[#23262f] hover:fill-[#777E90] hover_transition" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
                     <path d="M44.665,165.049a1.143,1.143,0,1,1-1.616,1.616L37,160.616l-6.049,6.049a1.143,1.143,0,0,1-1.616-1.616L35.384,159l-6.049-6.049a1.143,1.143,0,1,1,1.616-1.616L37,157.384l6.049-6.049a1.143,1.143,0,1,1,1.616,1.616L38.616,159Z" transform="translate(-29 -151)"/>
                 </svg>
+
+                <!-- <img id="close_nav_btn" class="hide_nav_btn" src="./img/btns/close_nav_btn.svg" alt="close_nav"> -->
                   
             </div><!-- ./mb_nav_btn -->
         </nav>
@@ -53,11 +57,11 @@
             
             <div class="mobile_nav_content container">
                 <div class="page_links flex flex-col">
-                    <a href="#">start</a>
-                    <a href="#">abou</a>
-                    <a href="#">foramts</a>
-                    <a href="#">download</a>
-                    <a href="#">contact</a>
+                    <a href="#">Start</a>
+                    <a href="#">About</a>
+                    <a href="#">Foramts</a>
+                    <a href="#">Download</a>
+                    <a href="#">Contact</a>
                 </div><!-- ./page_links -->
                 <div class="line_under_nav bg-light_ray"></div>
                 
@@ -112,46 +116,42 @@
     <section id="hero" class="hero" >
         <div class="hero_content container text-center relative">
                 <!-- white gradient over lay -->
-                <img class="white_over_lay h-full absolute top-0 left-0 right-0 bottom-0"
+                <img class="white_over_lay h-full w-full absolute top-0 left-0 right-0 bottom-0"
                 src="./img/backgrounds/gradient_hero.png" alt="" draggable="false">
                 <!-- the hero section text content start -->
-                <div class="text_content">
-                    <h1 class=" text-black uppercase text-4xl sm:text-6xl font-bold ">
+                <div class="text_content z-50">
+                    <h1 class=" text-black  text-4xl sm:text-6xl font-bold ">
                     The most <br> popular icon set
                     </h1>
-                    <p class="text-black capitalize text-sm sm:text-base leading-7 font-normal md:px-28 lg:px-52">
+                    <p class="text-black  text-sm sm:text-base leading-7 font-normal md:px-28 lg:px-52">
                         Magicoon is a modern library that every designer should have, ready for instant use anytime and 
                         anywhere on your projects. 
                     </p>
-                    <div class="hero_download_btn bg-blue hover:bg-dark_blue transition ease-in center gap-x-4 roun mx-auto cursor-pointer">
+                    <a href="#" class="hero_download_btn bg-blue hover:bg-dark_blue transition ease-in center gap-x-4 roun mx-auto cursor-pointer">
                         <img src="./img/download_icon.svg" alt="" class="donwload_btn_icon">
-                        <span class=" uppercase text-white font-semibold text-sm">download</span>
-                    </div><!-- ./hero_donwload_btn -->
+                        <span class="  text-white font-semibold text-sm">download</span>
+                    </a><!-- ./hero_donwload_btn -->
                     <div class="other_text text-xs">
                         <span class="text-gray font-normal block">Your donation will</span>
                         <span class="text-black font-semibold">help us grow.</span>
                     </div>
-            </div>
-            <!-- the hero section text content end -->
+                </div>
+                  <!-- the hero section text content end -->
     
         </div><!-- ./hero_content -->
-        </section>
-    <!-- hero section end -->
-    <!-- ################################################ -->
-        <!-- about section start -->
-    <section id="about" class="about mt-10 relative" data-href="link1">
+
         <div class="container">
             <div class="box bg-super_light_gray grid_system rounded-2xl px-4 py-6 sm:p-11">
-                <div class="box_item_figma  box_item  bg-white hover:bg-black hover_transition">
+                <a href="#" class="box_item_figma  box_item  bg-white hover:bg-black hover_transition">
                     <div class="icon_container  bg-light_ray">
                         <img src="./img/icons/figma_icon.svg" alt="">
                     </div>
                     <div class="item_text">
-                        <h3 class="item_title capitalize font-bold text-black text mb-1 ">figma</h3>
+                        <h3 class="item_title  font-bold text-black text mb-1 ">figma</h3>
                         <span class="item_desc ">@SeyfDesigner</span>
                     </div><!-- ./text_item -->
-                </div>
-
+                </a>
+    
                 <div class="  box_item ">
                     <div class="icon_container" style="background-color: #F7931A;">
                         <img src="./img/icons/icon_icon.svg" alt="">
@@ -161,7 +161,7 @@
                         <span class="item_desc">icons</span>
                     </div><!-- ./text_item -->
                 </div>
-
+    
                 <div class="  box_item ">
                     <div class="icon_container" style="background-color: #01ACED;">
                         <img src="./img/icons/download_icon.svg" alt="">
@@ -171,7 +171,7 @@
                         <span class="item_desc">Download</span>
                     </div><!-- ./text_item -->
                 </div>
-
+    
                 <div class="  box_item ">
                     <div class="icon_container" style="background-color: #767DFF;">
                         <img src="./img/icons/duplicate_icon.svg" alt="">
@@ -182,6 +182,14 @@
                     </div><!-- ./text_item -->
                 </div>
             </div><!-- ./box -->
+        </div>
+    </section>
+    <!-- hero section end -->
+    <!-- ################################################ -->
+        <!-- about section start -->
+    <section id="about" class="about mt-10 relative" data-href="link1">
+        <div class="container">
+            
             
             <div class="about_text mt-40">
                 <h3 class="">about</h3>
@@ -203,10 +211,8 @@
 
             <div class="icons_styles grid_system">
                 <div class="item">
-                    <div class="box hover_transition">
-                        <svg id="shopping-basket-Light" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path id="shopping-basket-Light-2" data-name="shopping-basket-Light" d="M73.548,84.906v7.579a1.263,1.263,0,1,1-2.526,0V84.906a1.263,1.263,0,1,1,2.526,0Zm8.842-1.263a1.262,1.262,0,0,0-1.263,1.263v7.579a1.263,1.263,0,1,0,2.526,0V84.906a1.262,1.262,0,0,0-1.263-1.264ZM97.46,78.1,95.482,93.6a8.859,8.859,0,0,1-8.771,7.722H68.02a8.863,8.863,0,0,1-8.766-7.693L57.218,78.1a6.314,6.314,0,0,1,2.436-12.14H63.99L71.2,53.94a1.263,1.263,0,1,1,2.166,1.3L66.937,65.958h20.8L81.307,55.239a1.263,1.263,0,0,1,2.166-1.3l7.211,12.019h4.337A6.315,6.315,0,0,1,97.46,78.1ZM92.975,93.283,94.85,78.589H59.829l1.93,14.716A6.331,6.331,0,0,0,68.02,98.8H86.711A6.327,6.327,0,0,0,92.975,93.283Zm5.836-21.01a3.794,3.794,0,0,0-3.789-3.789H59.653a3.789,3.789,0,1,0,0,7.579H95.021A3.794,3.794,0,0,0,98.811,72.273Z" transform="translate(-53.338 -53.326)" />
-                        </svg>
+                    <div class="box hover_transition">  
+                        <img id="shopping-basket-Light" src="./img/icons/shopping-basket-Light.svg" alt="">
                         <span>Light</span>
                     </div>
                     <span class="icon_px">1 px</span>
@@ -214,9 +220,8 @@
 
                 <div class="item">
                     <div class="box hover_transition">
-                        <svg id="shopping-basket-Regular" xmlns="http://www.w3.org/2000/svg" width="48" height="48.001" viewBox="0 0 48 48.001">
-                            <path id="shopping-basket-Regular-2" data-name="shopping-basket-Regular" d="M68.919,79.379v7.385a1.846,1.846,0,1,1-3.692,0V79.379a1.846,1.846,0,0,1,3.692,0Zm8-1.846a1.846,1.846,0,0,0-1.846,1.846v7.385a1.846,1.846,0,1,0,3.692,0V79.379A1.846,1.846,0,0,0,76.919,77.533Zm15.254-4.4-1.887,14.8A9.25,9.25,0,0,1,81.13,96H62.918a9.254,9.254,0,0,1-9.152-8.031L51.822,73.14A6.752,6.752,0,0,1,54.765,60.3h3.878L65.49,48.891a1.846,1.846,0,1,1,3.166,1.9L62.949,60.3H81.044L75.336,50.79a1.846,1.846,0,1,1,3.166-1.9L85.349,60.3h3.878a6.752,6.752,0,0,1,2.946,12.834Zm-3.813.7H55.638l1.788,13.643A5.551,5.551,0,0,0,62.918,92.3H81.13a5.548,5.548,0,0,0,5.492-4.837ZM92.3,67.072a3.08,3.08,0,0,0-3.077-3.077H54.765a3.077,3.077,0,1,0,0,6.154H89.227A3.08,3.08,0,0,0,92.3,67.072Z" transform="translate(-47.995 -47.994)"/>
-                            </svg>
+                        
+                        <img id="shopping-basket-Regular" src="./img/icons/shopping-basket-Regular.svg" alt="">
                             
                         <span>regular</span>
                     </div>
@@ -225,9 +230,9 @@
 
                 <div class="item">
                     <div class="box hover_transition">
-                        <svg id="shopping-basket-Bold" xmlns="http://www.w3.org/2000/svg" width="48" height="47.985" viewBox="0 0 48 47.985">
-                            <path id="shopping-basket-Bold-2" data-name="shopping-basket-Bold" d="M64.262,73.854v7.2a2.4,2.4,0,0,1-4.8,0v-7.2a2.4,2.4,0,0,1,4.8,0Zm7.2-2.4a2.4,2.4,0,0,0-2.4,2.4v7.2a2.4,2.4,0,0,0,4.8,0v-7.2A2.4,2.4,0,0,0,71.462,71.454Zm15.429-3.308-1.8,14.121a9.618,9.618,0,0,1-9.522,8.381H57.811a9.623,9.623,0,0,1-9.517-8.35L46.438,68.149A7.173,7.173,0,0,1,49.863,54.66H53.3l6.5-10.832A2.4,2.4,0,0,1,63.92,46.3L58.9,54.66H74.423L69.4,46.3a2.4,2.4,0,0,1,4.115-2.469l6.5,10.832h3.441a7.173,7.173,0,0,1,3.43,13.487ZM47.462,61.857a2.4,2.4,0,0,0,2.4,2.4h33.6a2.4,2.4,0,1,0,0-4.8h-33.6a2.4,2.4,0,0,0-2.4,2.4Zm34.473,7.2H51.4l1.655,12.619a4.81,4.81,0,0,0,4.758,4.175H75.567a4.807,4.807,0,0,0,4.76-4.189Z" transform="translate(-42.662 -42.663)" />
-                        </svg>
+                        
+                        <img id="shopping-basket-Bold" src="./img/icons/shopping-basket-Bold.svg" alt="">
+
                         <span>bold</span>
                     </div>
                     <span class="icon_px">2 px</span>
@@ -235,10 +240,9 @@
 
                 <div class="item">
                     <div class="box hover_transition">
-                        <svg id="shopping-basket-Filled" xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48">
-                            <path id="shopping-basket-Filled-2" data-name="shopping-basket-Filled" d="M85.267,69.471a1.241,1.241,0,0,0-.912-.408H48.979a1.241,1.241,0,0,0-.912.408,1.349,1.349,0,0,0-.288.96l1.7,12.912a8.43,8.43,0,0,0,8.328,7.32h17.76a8.419,8.419,0,0,0,8.352-7.344l1.632-12.912A1.323,1.323,0,0,0,85.267,69.471Zm-21,11.592a2.4,2.4,0,1,1-4.8,0v-4.8a2.4,2.4,0,1,1,4.8,0Zm9.6,0a2.4,2.4,0,1,1-4.8,0v-4.8a2.4,2.4,0,1,1,4.8,0Zm16.8-21a5.4,5.4,0,0,1-5.4,5.4h-37.2a5.4,5.4,0,1,1,0-10.8h5.241l6.5-10.835a2.4,2.4,0,0,1,4.116,2.47l-5.019,8.365H74.428L69.409,46.3a2.4,2.4,0,0,1,4.116-2.47l6.5,10.835h5.241A5.4,5.4,0,0,1,90.667,60.064Z" transform="translate(-42.667 -42.663)"  fill-rule="evenodd"/>
-                            </svg>
-                            
+                       
+                        <img id="shopping-basket-Filled" src="./img/icons/shopping-basket-Filled.svg" alt="">
+
                         <span>filled</span>
                     </div>
                     <span class="icon_px">solid</span>
@@ -256,7 +260,7 @@
                     <div class="text_content sm:col-span-6">
                         <div class="flex items-center gap-6 pb-4">
                             <span class="hidden sm:block bg-gray"></span>
-                            <span class=" uppercase font-bold text-sm sm:text-base text-gray">formats</span>
+                            <span class="  font-bold text-sm sm:text-base text-gray">formats</span>
                         </div>
     
                         <div class="">
@@ -264,27 +268,27 @@
                             <ul>
                                 <li class="">
                                     <img src="./img/icons/check-circle-Filled.svg" alt="">
-                                    <span class="capitalize">Free icons library.</span>
+                                    <span class="">Free icons library.</span>
                                 </li>
                                 <li>
                                     <img src="./img/icons/check-circle-Filled.svg" alt="">
-                                    <span class="capitalize">360 Icons (90 icons × 4 styles).</span>
+                                    <span class="">360 Icons (90 icons × 4 styles).</span>
                                 </li>
                                 <li>
                                     <img src="./img/icons/check-circle-Filled.svg" alt="">
-                                    <span class="capitalize">4 Styles (light, regular, bold, filled).</span>
+                                    <span class="">4 Styles (light, regular, bold, filled).</span>
                                 </li>
                                 <li>
                                     <img src="./img/icons/check-circle-Filled.svg" alt="">
-                                    <span class="capitalize">Support (fig, xd, ai, eps, svg, pdf, png).</span>
+                                    <span class="">Support (fig, xd, ai, eps, svg, pdf, png).</span>
                                 </li>
                                 <li>
                                     <img src="./img/icons/check-circle-Filled.svg" alt="">
-                                    <span class="capitalize">24 x 24px Grid size.</span>
+                                    <span class="">24 x 24px Grid size.</span>
                                 </li>
                                 <li>
                                     <img src="./img/icons/check-circle-Filled.svg" alt="">
-                                    <span class="capitalize">Clean & smooth.</span>
+                                    <span class="">Clean & smooth.</span>
                                 </li>
                             </ul>
                         </div>
@@ -382,7 +386,7 @@
                 <div class="text_content sm:col-span-6">
                     <div class="flex items-center gap-6 pb-4">
                         <span class="hidden sm:block bg-gray"></span>
-                        <span class=" uppercase font-bold text-sm sm:text-base text-gray">download</span>
+                        <span class="  font-bold text-sm sm:text-base text-gray">download</span>
                     </div>
     
                     <div class="">
@@ -390,11 +394,11 @@
                         <ul>
                             <li class="">
                                 <img src="./img/icons/check-circle-Filled-green.svg" alt="">
-                                <span class="capitalize">Prices are from zero to infinite. </span>
+                                <span class="">Prices are from zero to infinite. </span>
                             </li>
                             <li>
                                 <img src="./img/icons/check-circle-Filled-green.svg" alt="">
-                                <span class="capitalize">If you want to contribute to the continuity of this project; choose a non-binary number. </span>
+                                <span class="">If you want to contribute to the continuity of this project; choose a non-binary number. </span>
                             </li>
                             
                         </ul>
@@ -404,8 +408,8 @@
                                 <img src="./img/download_icon.svg" alt="">
                             </div>
                             <a href="#" class="text">
-                                <span class=" font-bold text-lg  block uppercase">download</span>
-                                <span class="font-normal text-sm capitalize">all format</span>
+                                <span class=" font-bold text-lg  block ">download</span>
+                                <span class="font-normal text-sm ">all format</span>
                             </a>
                         </div>
                     </div>
@@ -479,38 +483,52 @@
                     
                         <ul class="links flex flex-col hover_transition">
                             <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
-                                    <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
-                                </svg>
-                                <!-- <img src="./img//icons/arrow_icon.svg" alt=""> -->
-                                <a href="#">home</a>
+                                
+                                <a href="#" class="flex items-center gap-4">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                        <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                    </svg>
+                                    <span>home</span>
+                                </a>
                             </li>
                             <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
-                                    <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
-                                </svg>
-                                <a href="#">about</a>
+                                
+                                <a href="#about">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                        <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                    </svg>
+                                    <span>About</span>
+                                </a>
                             </li>
                             <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
-                                    <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
-                                </svg>
-                                <a href="#">formats</a>
+                                
+                                <a href="#formats">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                        <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                    </svg>
+                                    <span>formats</span>
+                                </a>
                             </li>
                             <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
-                                    <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
-                                </svg>
-                                <a href="#">download</a>
+                                
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                        <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                    </svg>
+                                    <span>Download</span>
+                                </a>
                             </li>
                             <li>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
-                                    <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
-                                </svg>
-                                <a href="#">contact</a>
+
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                        <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                    </svg>   
+                                    <span>Contact</span>
+                                </a>
                             </li>
         
-                        </ul><!-- ./social_links -->
+                        </ul><!-- ./site_links -->
                     
                 </div><!-- ./inner_links -->
                 <div class="social_links">
@@ -518,53 +536,68 @@
                     
                     <ul class="links ">
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
-                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
-                            </svg>
-                            <div class="div">
-                                <a href="#">twitter</a>
-                                <span>@magicoonLibrary</span>
-                            </div>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                    <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                </svg>
+                                <div>
+                                    <span class="social_title">Twitter</span>
+                                    <span>@magicoonLibrary</span>
+
+                                </div>
+                            </a>
                         </li>
 
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
-                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
-                            </svg>
-                            <div class="div">
-                                <a href="#">instagram</a>
-                                <span>@magicoonLibrary</span>
-                            </div>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                    <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                </svg>
+                                <div>
+                                    <span class="social_title">Instagram</span>
+                                    <span>@magicoonLibrary</span>
+
+                                </div>
+                            </a>
                         </li>
 
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
-                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
-                            </svg>
-                            <div class="div">
-                                <a href="#">drible</a>
-                                <span>@magicoonLibrary</span>
-                            </div>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                    <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                </svg>
+                                <div>
+                                    <span class="social_title">Drible</span>
+                                    <span>@magicoonLibrary</span>
+
+                                </div>
+                            </a>
                         </li>
 
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
-                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
-                            </svg>
-                            <div class="div">
-                                <a href="#">behance</a>
-                                <span>@magicoonLibrary</span>
-                            </div>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                    <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                </svg>
+                                <div>
+                                    <span class="social_title">Behance</span>
+                                    <span>@magicoonLibrary</span>
+
+                                </div>
+                            </a>
                         </li>
 
                         <li>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8">
-                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" fill="#23262f"/>
-                            </svg>
-                            <div class="div">
-                                <a href="#">figma</a>
-                                <span>@SeyfDesigner</span>
-                            </div>
+                            <a href="#">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                    <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                </svg>
+                                <div>
+                                    <span class="social_title">Figma</span>
+                                    <span>@SeyfDesigner</span>
+
+                                </div>
+                            </a>
                         </li>
                     </ul>
                 </div><!-- ./social_links -->
@@ -579,7 +612,7 @@
                 <div class="footer_send_mail  lg:pr-14 mt-5 mb-5 sm:mb-11">
                     <form action="" class=" border-2 border-light_ray rounded-3xl">
                         <div class="form_container flex h-full justify-between items-center pr-2 pl-6">
-                            <input type="email" placeholder="Your Email.." class=" placeholder-gray caret-gray text-sm text-black font-normal">
+                            <input type="email" placeholder="Your Email.." class=" placeholder-gray caret-gray text-sm bg-white text-black font-normal">
                             <button type="submit" class="bg-blue hover:bg-dark_blue hover_transition w-8 h-8 grid place-content-center rounded-full">
                                 <img src="./img/icons/arrow_right.png" alt="">
                             </button>
@@ -588,7 +621,7 @@
 
                 </div>
                 <h4 class=" mt-6 mb-5 sm:mb-5 sm:mt-11 font-bold text-black text-sm">Email</h4>
-                <span class="">Contact@magicoon.com</span>
+                <a href="#" class="">Contact@magicoon.com</a>
 
             </div>
         </div>  
@@ -602,7 +635,7 @@
                     <img id="dz_flag_footer" src="./img/icons/dz_flag.svg" alt="dz">
                 </span>
                 <span class="text-gray font-normal  mx-1">by</span>    
-                <span class="text-black  font-semibold">Seyfeddine B.</span></div>
+                <a href="#" class="text-black hover:text-blue transition  font-semibold">Seyfeddine B.</a></div>
         </div>
     </div>
 </footer>
@@ -850,32 +883,6 @@
     // slider code end 
 
 
-    // change color of links when scrolling over section
-    const sections = document.querySelectorAll('section');
-    const nav_links = document.querySelectorAll('.desk_nav .nav_links ul > a');
-    let current_id_section;
-    this.onscroll = function(){
-        sections.forEach((section) => {
-            const section_y = section.offsetTop;
-            if(pageYOffset >= section_y){
-                current_id_section = section.getAttribute('id');
-            }
-        });
-        nav_links.forEach((item) => {
-            item.classList.remove('activ_nav_link');
-            if(item.getAttribute('href').substring(1) == current_id_section){
-                item.classList.add('activ_nav_link');
-            }
-
-            
-        })
-
-
-        
-
-
-        
-    }
 
 
 

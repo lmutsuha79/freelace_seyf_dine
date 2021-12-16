@@ -37,6 +37,7 @@ module.exports = {
       },
       zIndex: {
         '-1': '-1',
+        '99': '99'
       },
       flexGrow: {
         '3': 3

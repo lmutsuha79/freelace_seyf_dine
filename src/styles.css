@@ -8,8 +8,22 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+    a{
+        @apply transition
+    }
+}
 
 
+body{
+    margin-top: 101px;
+}
+/* small screens */
+@media screen and (max-width: 768px) {
+    body{
+        margin-top: 76px;
+    }
+}
 
 
 
@@ -80,15 +94,18 @@ h3{
     .activ_nav_link {
         @apply text-black
     }
+    .nav_links ul >a:not(.contact_desk_nav_btn):hover{
+        @apply text-black
+    }
 }
 
 .nav_links ul> a {
    margin-left: 53px; 
 }
-.nav_links ul >a:hover {
+
+/* .nav_links ul >a:hover {
     color: #23262F;
-    /* transtion for a is in general style  */
- }
+ } */
 .contact_desk_nav_btn{
     width: 94px;
     height: 43px;
@@ -131,7 +148,7 @@ h3{
 }
 @layer components{
     #mb_nav .page_links a {
-        @apply text-sm font-semibold text-gray hover:text-black transition-colors ease-in capitalize;
+        @apply text-sm font-semibold text-gray hover:text-black transition-colors ease-in ;
     }
     #mb_nav .page_links a:first-child {
         @apply text-black;
@@ -140,7 +157,7 @@ h3{
 
 @layer components{
     #mb_nav .social_links a {
-        @apply text-sm font-semibold text-black hover:text-gray  capitalize;
+        @apply text-sm font-semibold text-black hover:text-gray  ;
     }
     #mb_nav .social_links  li {
         @apply  flex flex-row items-center gap-4;
@@ -155,18 +172,21 @@ h3{
 
 /* hero section start */
 .hero{
-    margin-top: calc(101px + 60px);
-    height: calc(100vh - 100px - 1px - 60px);
+    /* margin-top: calc(101px + 60px);
+    height: calc(100vh - 100px - 1px - 60px); */
 }
 @media screen and (max-width: 768px) {
     .hero{
-        margin-top: calc(76px + 80px);
-        height: calc(100vh - 75px - 1px - 80px);
+        /* margin-top: calc(76px + 80px);
+        height: calc(100vh - 75px - 1px - 80px); */
     }
 }
 .hero_content{
-    height: 100%;
-    padding: 60px 0px;
+    height: calc(100vh - 101px);
+    display: grid;
+    place-items: center;
+    /* height: 100%;
+    padding: 60px 0px; */
     background-image: url('./img/backgrounds/magicoon-header-icons.svg');
     background-repeat: no-repeat;
     background-position: center;   
@@ -203,29 +223,13 @@ h3{
     margin-bottom: 6px;
 }
 .hero .text_content{
-    position: absolute;
+    /* position: absolute;
     width: 100%;
     left: 50%;
     top: 50%;
-    transform: translate(-50%,calc(-50% - 60px));
+    transform: translate(-50%,calc(-50% - 60px)); */
 
 }
-/* hero section end */
-
-/* ############################################## */
-
-section.about{
-
-}
-
-.icon_container{
-
-}
-
-section.about .box{
-
-}
-
 @layer components{
     .box_item{
         @apply flex flex-row items-center rounded-2xl
@@ -274,13 +278,25 @@ section.about .box{
         gap: 24px;
         padding: 30px;
     }
-    #about .grid_system{
-        row-gap: 32px;
-    }
 }
+/* hero section end */
+
+/* ############################################## */
+
+
+
+
+
 
 /* ################ */
 /* about text */
+@media screen and (max-width:768px) {
+
+    #about .grid_system{
+        row-gap: 32px;
+        column-gap: 20px;
+    }
+}
 
 
 @layer components{
@@ -289,10 +305,10 @@ section.about .box{
         
     }
     .about_text h3{
-        @apply text-black font-bold uppercase mb-8
+        @apply text-black font-bold  mb-8
     }
     .about_text p{
-        @apply text-black font-normal text-sm capitalize
+        @apply text-black font-normal text-sm 
 
     } 
 }
@@ -337,17 +353,23 @@ section.about .box{
         @apply col-span-6 sm:col-span-3 flex flex-col items-center
     }
     .icons_styles .item .box{
-        @apply bg-blue hover:bg-dark_blue
-        rounded-2xl grid place-content-center gap-4
-    }
-    .icons_styles .item .box svg{
-        @apply w-12 h-12 fill-[#fcfcfd]
+        @apply bg-blue transition
+        rounded-2xl grid place-content-center gap-4 place-items-center
     }
     .icons_styles .item .box span{
-        @apply capitalize text-sm font-semibold text-white
+        @apply  text-sm font-semibold text-white
     }
-    .icon_px{
-        @apply capitalize border-2 border-light_ray font-semibold text-xs
+    .icons_styles .item:hover .box{
+        @apply bg-dark_blue
+    }
+    .icons_styles .item:hover >span{
+        @apply bg-black text-white border-none
+    }
+    .icons_styles .item .box img{
+        @apply w-12 h-12 
+    }
+    .icons_styles .item >span{
+        @apply  border-2 border-light_ray font-semibold text-xs transition
     }
 }
 
@@ -364,7 +386,7 @@ section.about .box{
 }
 
 
-/* ######################################## */
+/* #############    formats ################## */
 
 .formats{
 
@@ -405,10 +427,10 @@ section.about .box{
         @apply text-center md:text-left
     }
     .formats .box .icons_content .item .text span:first-child{
-        @apply uppercase font-semibold text-base sm:text-lg text-black block
+        @apply  font-semibold text-base sm:text-lg text-black block
     }
     .formats .box .icons_content .item .text span:nth-child(2){
-        @apply capitalize font-semibold text-gray text-sm
+        @apply  font-semibold text-gray text-sm
     }
 }
 
@@ -493,6 +515,9 @@ section.about .box{
 /* footer */
 
 @layer components {
+    footer ul li >a {
+        @apply text-black hover:text-gray
+    }
     
     footer .footer_container >div{
         @apply col-span-12  sm:col-span-6
@@ -502,38 +527,44 @@ section.about .box{
     }
 
     footer .footer_title{
-        @apply text-sm font-bold  text-black uppercase
+        @apply text-sm font-bold  text-black 
     }
-    footer a, footer p {
-        @apply capitalize
-    }
+  
     footer .footer_container a, footer .footer_container span,
     footer .footer_container p{
         @apply text-sm font-normal leading-7
     }
-    footer a{
-        @apply hover:text-gray
-    }
+  
     footer .footer_container ul {
         @apply flex flex-col items-baseline gap-5
     }
     footer .footer_container ul li {
         @apply flex items-center gap-4
     }
-
-    footer .social_links ul li {
+    
+    /* footer .social_links ul li {
         @apply items-baseline
+    } */
+    footer .links li >a{
+        @apply flex items-center gap-4 p-1 items-baseline
     }
+    footer ul li >a:hover svg{
+        @apply fill-[#3772FF];
+    }
+    
     footer .social_links ul li div span{
         @apply block
     }
+    footer .links .social_title{
+        @apply text-black hover:text-black
+    }
+  
 
     
 }
 
-footer{
 
-}
+
 
 footer .footer_container{
 }
