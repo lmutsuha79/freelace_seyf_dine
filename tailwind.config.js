@@ -41,6 +41,9 @@ module.exports = {
       },
       flexGrow: {
         '3': 3
+      },
+      padding: {
+        '5px': '5px',
       }
     
       

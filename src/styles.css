@@ -10,18 +10,16 @@
 
 @layer components{
     a{
-        @apply transition
+        @apply transition p-5px
     }
 }
 
 
 body{
-    margin-top: 101px;
 }
 /* small screens */
 @media screen and (max-width: 768px) {
     body{
-        margin-top: 76px;
     }
 }
 
@@ -76,9 +74,9 @@ h3{
     #nav_header{
         height: 76px;
     }
-    #nav_header .logo{
-        max-width: 115px;
-        max-height: 23px;
+    #nav_header .logo img{
+        width: 115px;
+        height: 23px;
     }
     .desk_nav{
         height: 75px;
@@ -111,8 +109,8 @@ h3{
     height: 43px;
     margin-left: 74px;
 }
-.logo{
-    max-width: 170px;
+.logo img{
+    width: 170px;
     height: 34px;
 }
 #line_under_desk_nav{
@@ -172,13 +170,9 @@ h3{
 
 /* hero section start */
 .hero{
-    /* margin-top: calc(101px + 60px);
-    height: calc(100vh - 100px - 1px - 60px); */
 }
 @media screen and (max-width: 768px) {
     .hero{
-        /* margin-top: calc(76px + 80px);
-        height: calc(100vh - 75px - 1px - 80px); */
     }
 }
 
@@ -188,14 +182,28 @@ h3{
 }
 
 .hero_content{
-    height: calc(100vh - 101px);
+   
+    height: 535px;
+
     display: grid;
+    place-content: center;
     place-items: center;
-    /* height: 100%;
-    padding: 60px 0px; */
+ 
     background-image: url('./img/backgrounds/magicoon-header-icons.svg');
     background-repeat: no-repeat;
     background-position: center;   
+}
+.text_content{
+
+}
+
+@media screen and (max-width:768px){
+    .hero_content{
+    }
+    .text_content {
+
+        
+    }
 }
 .hero h1{
     line-height: 70px;
@@ -399,12 +407,11 @@ h3{
 }
 
 .downforamts_box .box{
-    padding: 90px 0px;
     gap: 30px;
 }
 .formats .box {
-    padding-left: 45px;
-    padding-right: 60px;
+    padding: 90px 60px 90px 45px;
+
 }
 .downforamts_box .box .text_content div:first-child span:first-child{
     width: 30px;
@@ -415,7 +422,7 @@ h3{
     line-height: 60px;
     
 }
-.downforamts_box .box .text_content div:nth-child(2){
+.downforamts_box .box .text_content >div:nth-child(2){
     padding-left: 55px;
 
 }
@@ -448,8 +455,14 @@ h3{
 
 @media screen and (max-width: 768px) {
     .downforamts_box .box{
-        padding: 48px 16px;
+        padding-left:  16px;
+        padding-right:  16px;
+
         /* gap: 30px; */
+    }
+    .formats .box{
+        padding-top: 48px;
+        padding-bottom: 48px;
     }
     .downforamts_box .box .text_content div:nth-child(2){
         padding-left: 0px;
@@ -530,7 +543,7 @@ h3{
 /* footer */
 
 @layer components {
-    footer ul li >a {
+    footer ul li >a,#email_address_text {
         @apply text-black hover:text-gray
     }
     
@@ -561,7 +574,7 @@ h3{
         @apply items-baseline
     } */
     footer .links li >a{
-        @apply flex items-center gap-4 p-1 items-baseline
+        @apply flex items-center gap-4 items-baseline
     }
     footer ul li >a:hover svg{
         @apply fill-[#3772FF];
@@ -579,7 +592,9 @@ h3{
 }
 
 
-
+/* footer .links li >a{
+    padding: 5px;
+} */
 
 footer .footer_container{
 }
@@ -621,3 +636,12 @@ footer .footer_container{
 }
 
 
+
+.space_y{
+    padding-top: 160px;
+}
+@media screen and (max-width: 768px){
+    .space_y{
+        padding-top: 80px;
+    }
+}

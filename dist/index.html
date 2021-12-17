@@ -20,7 +20,7 @@
     <!-- ############################################################## -->
         <!-- desk nav bar start -->
         <nav class="desk_nav container flex flex-nowrap flex-row items-center justify-between ">
-            <a class="logo" href="#">
+            <a class="logo p-5px" href="#">
                 <img src="./img/logo.svg" alt="logo" draggable="false" class=" w-full h-full">
             </a><!-- ./logo_img -->
 
@@ -58,10 +58,10 @@
             <div class="mobile_nav_content container">
                 <div class="page_links flex flex-col">
                     <a href="#">Start</a>
-                    <a href="#">About</a>
-                    <a href="#">Foramts</a>
-                    <a href="#">Download</a>
-                    <a href="#">Contact</a>
+                    <a href="#about">About</a>
+                    <a href="#formats">Foramts</a>
+                    <a href="#download">Download</a>
+                    <a href="./contact.html">Contact</a>
                 </div><!-- ./page_links -->
                 <div class="line_under_nav bg-light_ray"></div>
                 
@@ -113,7 +113,7 @@
 <!-- ################################################ -->
 <main>
     <!-- hero section start -->
-    <section id="hero" class="hero" >
+    <section id="hero" class="hero space_y" >
         <div class="hero_content container text-center relative">
                 <!-- white gradient over lay -->
           
@@ -141,14 +141,14 @@
     
         </div><!-- ./hero_content -->
 
-        <div class="container">
+        <div class="container pt-9 sm:pt-11">
             <div class="box bg-super_light_gray grid_system rounded-2xl px-4 py-6 sm:p-11">
                 <a href="#" class="box_item_figma  box_item  bg-white hover:bg-black hover_transition">
                     <div class="icon_container  bg-light_ray">
                         <img src="./img/icons/figma_icon.svg" alt="">
                     </div>
                     <div class="item_text">
-                        <h3 class="item_title  font-bold text-black text mb-1 ">figma</h3>
+                        <h3 class="item_title transition font-bold text-black text mb-1 ">figma</h3>
                         <span class="item_desc ">@SeyfDesigner</span>
                     </div><!-- ./text_item -->
                 </a>
@@ -188,11 +188,11 @@
     <!-- hero section end -->
     <!-- ################################################ -->
         <!-- about section start -->
-    <section id="about" class="about mt-10 relative" data-href="link1">
+    <section id="about" class="about space_y  relative" data-href="link1">
         <div class="container">
             
             
-            <div class="about_text mt-40">
+            <div class="about_text">
                 <h3 class="">about</h3>
                 <p>
                     A good design is a combination of creativity and the art of editing, this set of widely used and essential icons will help you manifest this in your designs. 
@@ -255,7 +255,7 @@
     <!-- ################################################ -->
     
     <!-- formats section start -->
-        <section id="formats" class="downforamts_box formats mt-20 sm:mt-40">
+        <section id="formats" class="downforamts_box formats space_y">
             <div class="container">
                 <div class="box bg-super_light_gray rounded-2xl sm:grid_system">
                     <div class="text_content sm:col-span-6">
@@ -381,7 +381,7 @@
     <!-- format section end  -->
         <!-- ################################################ -->
     <!-- download section start -->
-    <section id="download" class="downforamts_box download mt-20 sm:mt-40">
+    <section id="download" class="downforamts_box download space_y">
         <div class="container">
             <div class="box rounded-2xl sm:flex sm:gap-7">
                 <div class="text_content sm:w-1/2">
@@ -404,15 +404,15 @@
                             
                         </ul>
     
-                        <div class="donwload_btn bg-blue hover:bg-dark_blue hover_transition rounded-2xl flex gap-4 justify-center items-center text-white">
+                        <a href="#" class="donwload_btn bg-blue hover:bg-dark_blue hover_transition rounded-2xl flex gap-4 justify-center items-center text-white">
                             <div class="icon">
                                 <img src="./img/download_icon.svg" alt="">
                             </div>
-                            <a href="#" class="text">
+                            <div href="#">
                                 <span class=" font-bold text-lg  block ">DOWNLOAD</span>
                                 <span class="font-normal text-sm ">All Format</span>
-                            </a>
-                        </div>
+                            </div>
+                        </a>
                     </div>
                 </div><!-- ./text_content -->
     
@@ -474,7 +474,7 @@
     <!-- ############################################################### -->
 </main>
 
-<footer>
+<footer class="space_y">
     <div class="line_under_nav bg-light_ray"></div>
     <div class="container">
         <div class="footer_container grid_system">
@@ -622,7 +622,7 @@
 
                 </div>
                 <h4 class=" mt-6 mb-5 sm:mb-5 sm:mt-11 font-bold text-black text-sm">Email</h4>
-                <a href="#" class="">Contact@magicoon.com</a>
+                <a href="#" id="email_address_text">Contact@magicoon.com</a>
 
             </div>
         </div>  
@@ -631,9 +631,9 @@
     <div class="container">
         <div class="last_footer py-6 flex flex-col sm:flex-row justify-center sm:justify-between items-center">
             <span class="font-normal text-xs text-gray">© 2022 magicoon. All Rights Reserved</span>
-            <div class="text-xs flex">
-                <span class="text-gray font-normal flex">Made in 
-                    <img id="dz_flag_footer" src="./img/icons/dz_flag.svg" alt="dz">
+            <div class="text-xs flex items-center">
+                <span class="text-gray font-normal flex gap-1 items-center">Made in 
+                    <img id="dz_flag_footer" class=" ml-1" src="./img/icons/dz_flag.svg" alt="dz">
                 </span>
                 <span class="text-gray font-normal  mx-1">by</span>    
                 <a href="#" class="text-black hover:text-blue transition  font-semibold">Seyfeddine B.</a></div>
@@ -653,7 +653,15 @@
     var mb_nav_btn = document.getElementById('mb_nav_btn');
     var close_nav_btn = document.getElementById('close_nav_btn');
     var oppen_nav_btn = document.getElementById('oppen_nav_btn');
+    const mb_nav_links = document.querySelectorAll('#mb_nav a');
+    // close the oppned mb nav when click on link
+    mb_nav_links.forEach((link) => {
+        link.onclick = function(){
+            mb_nav_btn_click();
+        }
+    });
     mb_nav_btn.addEventListener('click',mb_nav_btn_click);
+
     function mb_nav_btn_click(){
         mb_nav.classList.toggle('translate-x-0');
         oppen_nav_btn.classList.toggle('hide_nav_btn');
@@ -884,6 +892,28 @@
     // slider code end 
 
 
+        // change color of links when scrolling over section
+    const sections = document.querySelectorAll('section');
+    const nav_links = document.querySelectorAll('.desk_nav .nav_links ul > a');
+    let current_id_section;
+    this.onscroll = function(){
+        sections.forEach((section) => {
+            const section_y = section.offsetTop;
+            if(pageYOffset >= section_y - 80){
+                current_id_section = section.getAttribute('id');
+            }
+        });
+        nav_links.forEach((item) => {
+            item.classList.remove('activ_nav_link');
+            if(item.getAttribute('href').substring(1) == current_id_section){
+                item.classList.add('activ_nav_link');
+            }
+
+            
+        })
+
+        
+    }
 
 
 
