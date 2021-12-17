@@ -543,7 +543,7 @@ h3{
 /* footer */
 
 @layer components {
-    footer ul li >a,#email_address_text {
+    footer ul li >a {
         @apply text-black hover:text-gray
     }
     
@@ -570,14 +570,15 @@ h3{
         @apply flex items-center gap-4
     }
     
-    /* footer .social_links ul li {
-        @apply items-baseline
-    } */
+  
     footer .links li >a{
         @apply flex items-center gap-4 items-baseline
     }
+    footer ul li >a svg{
+        @apply transition
+    }
     footer ul li >a:hover svg{
-        @apply fill-[#3772FF];
+        @apply fill-[#3772FF] transform translate-x-5px;
     }
     
     footer .social_links ul li div span{
@@ -586,7 +587,9 @@ h3{
     footer .links .social_title{
         @apply text-black hover:text-black
     }
-  
+    #email_address_text{
+        @apply text-black font-normal text-sm
+    }
 
     
 }

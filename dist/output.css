@@ -1005,11 +1005,11 @@ a{
 	--tw-bg-opacity: 1;
 	background-color: rgba(55, 114, 255, var(--tw-bg-opacity));
 }
-footer ul li >a, #email_address_text{
+footer ul li >a{
 	--tw-text-opacity: 1;
 	color: rgba(35, 38, 47, var(--tw-text-opacity));
 }
-footer ul li >a:hover, #email_address_text:hover{
+footer ul li >a:hover{
 	--tw-text-opacity: 1;
 	color: rgba(119, 126, 144, var(--tw-text-opacity));
 }
@@ -1057,16 +1057,23 @@ footer .footer_container ul li{
 	align-items: center;
 	gap: 1rem;
 }
-/* footer .social_links ul li {
-        @apply items-baseline
-    } */
 footer .links li >a{
 	display: flex;
 	align-items: center;
 	align-items: baseline;
 	gap: 1rem;
 }
+footer ul li >a svg{
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+	transition-duration: 150ms;
+}
 footer ul li >a:hover svg{
+	--tw-translate-x: 5px;
+	transform: var(--tw-transform);
+	transform: var(--tw-transform);
 	fill: #3772FF;
 }
 footer .social_links ul li div span{
@@ -1077,6 +1084,13 @@ footer .links .social_title{
 	color: rgba(35, 38, 47, var(--tw-text-opacity));
 }
 footer .links .social_title:hover{
+	--tw-text-opacity: 1;
+	color: rgba(35, 38, 47, var(--tw-text-opacity));
+}
+#email_address_text{
+	font-size: 0.875rem;
+	line-height: 1.25rem;
+	font-weight: 400;
 	--tw-text-opacity: 1;
 	color: rgba(35, 38, 47, var(--tw-text-opacity));
 }
@@ -1282,9 +1296,6 @@ footer .links .social_title:hover{
 }
 .fill-\[\#23262f\]{
 	fill: #23262f;
-}
-.p-1{
-	padding: 0.25rem;
 }
 .p-5px{
 	padding: 5px;

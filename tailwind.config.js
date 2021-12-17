@@ -44,6 +44,9 @@ module.exports = {
       },
       padding: {
         '5px': '5px',
+      },
+      translate: {
+        '5px': '5px',
       }
     
       
