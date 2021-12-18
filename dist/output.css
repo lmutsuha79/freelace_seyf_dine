@@ -730,13 +730,13 @@ a{
 	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 	transition-duration: 150ms;
 }
-.social_links a:hover svg{
+.links a:hover svg{
 	--tw-translate-x: 5px;
 	transform: var(--tw-transform);
 	transform: var(--tw-transform);
 	fill: #3772FF;
 }
-.social_links a svg{
+.links a svg{
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter;

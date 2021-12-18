@@ -12,11 +12,11 @@
     a{
         @apply transition p-5px
     }
-    .social_links a:hover svg{
+    .links a:hover svg{
         @apply fill-[#3772FF] transform translate-x-5px;
 
     }
-    .social_links a svg{
+    .links a svg{
         @apply transition
     }
 }
