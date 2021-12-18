@@ -12,6 +12,13 @@
     a{
         @apply transition p-5px
     }
+    .social_links a:hover svg{
+        @apply fill-[#3772FF] transform translate-x-5px;
+
+    }
+    .social_links a svg{
+        @apply transition
+    }
 }
 
 
@@ -157,13 +164,16 @@ h3{
     #mb_nav .social_links a {
         @apply text-sm font-semibold text-black hover:text-gray  ;
     }
-    #mb_nav .social_links  li {
+    #mb_nav .social_links  a {
         @apply  flex flex-row items-center gap-4;
     }  
+ 
+   
 }
-#mb_nav .social_links li:hover path{
+/* #mb_nav .social_links a:hover path{
     fill:#3772FF;
-}
+} */
+
 /* mobile nav end */
 /* ################################## */
 
@@ -293,6 +303,36 @@ h3{
         padding: 30px;
     }
 }
+
+
+/* slider_hero  */
+@layer components{
+    #hero .box .box_content >div{
+        @apply min-w-full
+    }
+}
+
+@keyframes infinity_scroll{
+    0% {
+        transform: translateX(0%);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+@media screen and (min-width:768px){
+    #hero .box .box_content{
+        /* transition: 3s ; */
+        animation-name: infinity_scroll;
+        animation-duration: 30s;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+    }
+}
+
+
 /* hero section end */
 
 /* ############################################## */
@@ -574,12 +614,14 @@ h3{
     footer .links li >a{
         @apply flex items-center gap-4 items-baseline
     }
-    footer ul li >a svg{
+    /* make it as general class */
+    /* footer ul li >a svg{
         @apply transition
     }
-    footer ul li >a:hover svg{
+    footer ul li >a:hover svg {
         @apply fill-[#3772FF] transform translate-x-5px;
-    }
+    } */
+
     
     footer .social_links ul li div span{
         @apply block
