@@ -1544,6 +1544,39 @@ h3{
 
 
 /* hero section start */
+
+@-webkit-keyframes scroll_background{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -2420px 0;
+    }
+}
+
+@keyframes scroll_background{
+    0%{
+        background-position: 0 0;
+    }
+    100%{
+        background-position: -2420px 0;
+    }
+}
+.hero_content{
+    background-repeat: repeat-x;
+    background-position: 0 0;
+    background-size: auto 100%;
+    -webkit-animation: scroll_background 180s infinite linear ;
+            animation: scroll_background 180s infinite linear ;
+
+    height: 535px;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    background-image: url('./img/backgrounds/magicoon-header-icons.svg');
+}
+
+
 .hero{
 }
 @media screen and (max-width: 768px) {
@@ -1556,21 +1589,6 @@ h3{
     background: linear-gradient(0deg, rgba(252,252,253,0) 0%, rgba(252,252,253,1) 100%);
 }
 
-.hero_content{
-   
-    height: 535px;
-
-    display: grid;
-    place-content: center;
-    place-items: center;
- 
-    background-image: url('./img/backgrounds/magicoon-header-icons.svg');
-    background-repeat: no-repeat;
-    background-position: center;   
-}
-.text_content{
-
-}
 
 @media screen and (max-width:768px){
     .hero_content{
@@ -1656,39 +1674,7 @@ h3{
 
 /* slider_hero  */
 
-@-webkit-keyframes infinity_scroll{
-    0% {
-        transform: translateX(0%);
-    }
 
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-@keyframes infinity_scroll{
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-50%);
-    }
-}
-
-@media screen and (min-width:768px){
-    #hero .box .box_content{
-        /* transition: 3s ; */
-        -webkit-animation-name: infinity_scroll;
-                animation-name: infinity_scroll;
-        -webkit-animation-duration: 30s;
-                animation-duration: 30s;
-        -webkit-animation-iteration-count: infinite;
-                animation-iteration-count: infinite;
-        -webkit-animation-timing-function: linear;
-                animation-timing-function: linear;
-    }
-}
 
 
 /* hero section end */
@@ -1976,9 +1962,6 @@ footer .footer_container{
 	}
     .sm\:flex{
 		display: flex;
-	}
-    .sm\:grid{
-		display: grid;
 	}
     .sm\:hidden{
 		display: none;

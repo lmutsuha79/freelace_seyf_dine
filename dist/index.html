@@ -185,48 +185,7 @@
                         </div><!-- ./text_item -->
                     </div>
                 </div>
-                   <!-- // just for loop slide -->
-                <div class="hidden sm:grid slide_shrink one grid_system">
-                    <a href="#" class="box_item_figma  box_item  bg-white hover:bg-black hover_transition">
-                        <div class="icon_container  bg-light_ray">
-                            <img src="./img/icons/figma_icon.svg" alt="">
-                        </div>
-                        <div class="item_text">
-                            <h3 class="item_title transition font-bold text-black text mb-1 ">figma</h3>
-                            <span class="item_desc ">@SeyfDesigner</span>
-                        </div><!-- ./text_item -->
-                    </a>
-        
-                    <div class="  box_item ">
-                        <div class="icon_container" style="background-color: #F7931A;">
-                            <img src="./img/icons/icon_icon.svg" alt="">
-                        </div>
-                        <div class="item_text">
-                            <h3 class="item_title item_title_num">360</h3>
-                            <span class="item_desc">icons</span>
-                        </div><!-- ./text_item -->
-                    </div>
-        
-                    <div class="  box_item ">
-                        <div class="icon_container" style="background-color: #01ACED;">
-                            <img src="./img/icons/download_icon.svg" alt="">
-                        </div>
-                        <div class="item_text">
-                            <h3 class="item_title item_title_num">2.0K+</h3>
-                            <span class="item_desc">Download</span>
-                        </div><!-- ./text_item -->
-                    </div>
-        
-                    <div class="  box_item ">
-                        <div class="icon_container" style="background-color: #767DFF;">
-                            <img src="./img/icons/duplicate_icon.svg" alt="">
-                        </div>
-                        <div class="item_text">
-                            <h3 class="item_title item_title_num">2.6K+</h3>
-                            <span class="item_desc">Duplicate</span>
-                        </div><!-- ./text_item -->
-                    </div>
-                </div>   
+                
                </div>
             </div><!-- ./box -->
 
@@ -969,64 +928,6 @@
 
 
 
-    // infinity animation on hero section icons
-    const box_content = document.querySelector('#hero .box .box_content');
-    //const slide_shrink = document.querySelectorAll('.slide_shrink')[0];
-    const slide_shrink = `
-    <div class="slide_shrink one grid_system">
-        <a href="#" class="box_item_figma  box_item  bg-white hover:bg-black hover_transition">
-            <div class="icon_container  bg-light_ray">
-                <img src="./img/icons/figma_icon.svg" alt="">
-            </div>
-            <div class="item_text">
-                <h3 class="item_title transition font-bold text-black text mb-1 ">figma</h3>
-                <span class="item_desc ">@SeyfDesigner</span>
-            </div><!-- ./text_item -->
-        </a>
-
-        <div class="  box_item ">
-            <div class="icon_container" style="background-color: #F7931A;">
-                <img src="./img/icons/icon_icon.svg" alt="">
-            </div>
-            <div class="item_text">
-                <h3 class="item_title item_title_num">360</h3>
-                <span class="item_desc">icons</span>
-            </div><!-- ./text_item -->
-        </div>
-
-        <div class="  box_item ">
-            <div class="icon_container" style="background-color: #01ACED;">
-                <img src="./img/icons/download_icon.svg" alt="">
-            </div>
-            <div class="item_text">
-                <h3 class="item_title item_title_num">2.0K+</h3>
-                <span class="item_desc">Download</span>
-            </div><!-- ./text_item -->
-        </div>
-
-        <div class="  box_item ">
-            <div class="icon_container" style="background-color: #767DFF;">
-                <img src="./img/icons/duplicate_icon.svg" alt="">
-            </div>
-            <div class="item_text">
-                <h3 class="item_title item_title_num">2.6K+</h3>
-                <span class="item_desc">Duplicate</span>
-            </div><!-- ./text_item -->
-        </div>
-    </div>`
-    
-    // make the infinity slide only on large screens and  remove shrinks on small ones
-    var x = matchMedia('(min-width: 768px)')
-    
-    x.addListener(function(){
-        if(x.matches){
-            box_content.innerHTML += slide_shrink;
-            console.log('match')
-        }else{
-            box_content.innerHTML = slide_shrink;
-            console.log('not matche')
-        }
-    })
 
 
 </script>
