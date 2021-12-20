@@ -47,6 +47,9 @@ module.exports = {
       },
       translate: {
         '5px': '5px',
+      },
+      dropShadow: {
+        'contact_drop_shadow': '0px 10px 20px rgba(119, 126, 144, 0.18)'
       }
     
       
@@ -68,18 +71,27 @@ module.exports = {
           maxWidth: 'calc(100% - 48px)',
           '@screen sm': {
             maxWidth: '750px',
+            padding: '0px 20px',
           },
           '@screen md': {
             maxWidth: '970px',
+            padding: '0px 20px',
+
           },
           '@screen lg': {
             maxWidth: '1170px',
+            padding: '0px 20px',
+
           },
           '@screen xl': {
             maxWidth: '1170px',
+            padding: '0px 20px',
+
           },
           '@screen 2xl': {
             maxWidth: '1170px',
+            padding: '0px 20px',
+
           },
         }
       })

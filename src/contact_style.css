@@ -13,14 +13,151 @@
 .grid_system{
     gap: 30px;
 }
+/* ##################################### */
 
-
-.content{
-    padding: 90px 60px 90px 45px;
+.downforamts_box .box{
+    gap: 30px;
 }
+.contact .box {
+    padding: 90px 60px 90px 45px;
 
-
-.text .line{
+}
+.downforamts_box .box .text_content div:first-child span:first-child{
     width: 30px;
     height: 1px;
 }
+.downforamts_box .box .text_content h3{
+    font-size: 45px;
+    line-height: 60px;
+    
+}
+.downforamts_box .box .text_content >div:nth-child(2){
+    padding-left: 55px;
+
+}
+
+
+
+
+@layer components {
+    .downforamts_box .box .text_content ul li {
+        @apply flex items-center gap-5 pb-5
+    }
+ 
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .downforamts_box .box{
+        padding-left:  16px;
+        padding-right:  16px;
+
+        /* gap: 30px; */
+    }
+    .contact .box{
+        padding-top: 48px;
+        padding-bottom: 48px;
+    }
+    .downforamts_box .box .text_content div:nth-child(2){
+        padding-left: 0px;
+    
+    }
+
+    .downforamts_box .box .text_content h3{
+        font-size: 38px;
+        line-height: 56px;
+        
+    }
+  
+}
+
+@layer components{
+    
+    .form_content input, .form_content textarea{
+        @apply w-full rounded-2xl py-4 px-5 placeholder-gray caret-black text-sm outline-none
+        border-2 border-light_ray bg-white
+        default:border-light_ray default:bg-white
+        active:border-light_ray active:bg-super_light_gray
+        focus:border-blue focus:bg-white
+
+        
+    }   
+    .inp_no_valide{
+         @apply border-red-600
+    }
+}
+#contact{
+    margin-top: 190px;
+}
+#contact .form_content .inp_no_valide{
+    border-color: #EF466F;
+}
+#valide_msg, #name_msg, #text_msg{
+    color: #EF466F;
+}
+
+
+
+.form_content input{
+   height: 50px;
+}
+.form_content .select_inp{
+    /* relative with tailwind in html */
+}
+.form_content .select_inp img{
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 15px;
+    cursor: pointer;
+    padding: 10px;
+}
+.select_list_container{
+    height: 200px;
+    top: 55px;
+    padding: 10px;
+
+
+}
+.select_list_container ul{
+    gap: 1px;
+}
+@layer components {
+    .select_list_container ul li{
+        @apply cursor-pointer rounded-2xl transition bg-white hover:bg-super_light_gray text-black text-sm font-medium
+    }
+    
+}
+.list_active{
+    opacity: 1;
+    visibility: visible;
+    
+}
+.subject_item_active{
+    color: #3772FF;
+}
+
+.select_list_container ul li{
+    padding: 12px 15px;
+}
+#message_inp{
+    height: 220px;
+    resize: none;
+    /* 16px of gap */
+    margin-top: calc(25px - 16px);
+}
+#send_message_contact_btn{
+    border-radius: 29px;
+    border: none;
+    height: 50px;
+    gap: 15px;
+    /* 16px for gap */
+    margin-top: calc(30px - 16px);
+}
+@media screen and (max-width:768px ){
+    #send_message_contact_btn{
+        gap: 18px;
+    }
+}
+
+

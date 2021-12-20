@@ -181,12 +181,12 @@ h3{
 /* hero section start */
 
 @keyframes scroll_background{
-    0%{
+    /* 0%{
         background-position: 0 0;
     }
     100%{
-        background-position: -2420px 0;
-    }
+        background-position: -500px 0;
+    } */
 }
 .hero_content{
     background-repeat: repeat-x;
@@ -521,9 +521,9 @@ h3{
     padding: 60px 45px 30px 45px;  
 }
 @media screen and (max-width: 992px){
-    .slider{
+    /* .slider{
         padding: 60px 10px;
-    }
+    } */
 }
 @layer components{
     .slider .slide_contorler .bolets_container div{
@@ -536,7 +536,7 @@ h3{
 }
 
 .slider .slide_contorler{
-    margin-top: 30px;
+    width: 100%;
 }
 .slider .slide_contorler .bolets_container div{
     width: 10px;
@@ -677,6 +677,6 @@ footer .footer_container{
 }
 @media screen and (max-width: 768px){
     .space_y{
-        padding-top: 80px;
+        padding-top: 110px;
     }
 }

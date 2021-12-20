@@ -7,24 +7,459 @@
     <title>contact</title>
 
     <link rel="stylesheet" href="./contact_style_output.css">
+    <link rel="stylesheet" href="output.css">
+
 </head>
 <body>
+       
+    <header id="nav_header" class="bg-white fixed z-99 top-0 left-0 right-0">
+        <!-- ############################################################## -->
+            <!-- desk nav bar start -->
+            <nav class="desk_nav container flex flex-nowrap flex-row items-center justify-between ">
+                <a class="logo p-5px" href="#">
+                    <img src="./img/logo.svg" alt="logo" draggable="false" class=" w-full h-full">
+                </a><!-- ./logo_img -->
+    
+                <div class="hidden sm:block nav_links">
+                <ul class="flex flex-nowrap flex-row items-center text-gray hover_transition  font-semibold text-sm">
+                    <a href="./index.html">Start</a>
+                    <a href="./index.html#about">About</a>
+                    <a href="./index.html#formats">Foramts</a>
+                    <a href="./index.html#download">Download</a>
+               
+                    <a href="./contact.html"
+                    class="contact_desk_nav_btn grid place-content-center text-white border-none bg-black hover_transition rounded-3xl"
+                    >Contact</a>
+                </ul>
+                </div><!-- ./nav_links -->
+    
+                <div id="mb_nav_btn" class="w-5 h-4 cursor-pointer sm:hidden">
+                    <svg id="oppen_nav_btn" class="fill-[#23262f] hover:fill-[#777E90] hover_transition" xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
+                        <path class="" id="menu-Bold_1_" d="M225,1823a1,1,0,0,0-1-1H211a1,1,0,0,0,0,2h13A1,1,0,0,0,225,1823Zm-19,6h18a1,1,0,0,1,0,2H206a1,1,0,0,1,0-2Zm9,7h9a1,1,0,0,1,0,2h-9a1,1,0,0,1,0-2Z" transform="translate(-205 -1822)"/>
+                    </svg>
+                    <!-- <img id="oppen_nav_btn" src="./img/btns/oppen_nav_btn.svg" alt="oppen_nav"> -->
+    
+                    <svg id="close_nav_btn" class="hide_nav_btn fill-[#23262f] hover:fill-[#777E90] hover_transition" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M44.665,165.049a1.143,1.143,0,1,1-1.616,1.616L37,160.616l-6.049,6.049a1.143,1.143,0,0,1-1.616-1.616L35.384,159l-6.049-6.049a1.143,1.143,0,1,1,1.616-1.616L37,157.384l6.049-6.049a1.143,1.143,0,1,1,1.616,1.616L38.616,159Z" transform="translate(-29 -151)"/>
+                    </svg>
+    
+                    <!-- <img id="close_nav_btn" class="hide_nav_btn" src="./img/btns/close_nav_btn.svg" alt="close_nav"> -->
+                      
+                </div><!-- ./mb_nav_btn -->
+            </nav>
+            <div class="line_under_nav bg-light_ray"></div>
+    
+            <nav id="mb_nav" class="sm:hidden bg-white transform -translate-x-full ">
+                
+                <div class="mobile_nav_content container">
+                    <div class="page_links flex flex-col">
+                        <a href="./index.html">Start</a>
+                        <a href="./index.html#about">About</a>
+                        <a href="./index.html#formats">Foramts</a>
+                        <a href="./index.html#download">Download</a>
+                        <a href="./contact.html" class="text-black">Contact</a>
+                    </div><!-- ./page_links -->
+                    <div class="line_under_nav bg-light_ray"></div>
+                    
+                    <ul class="social_links links page_links flex flex-col">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)"/>
+                            </svg>
+                            <!-- <img src="./img//icons/arrow_icon.svg" alt=""> -->
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)"/>
+                            </svg>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)"/>
+                            </svg>
+                            <span >Drible</span>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)"/>
+                            </svg>
+                            <span>Behance</span>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)"/>
+                            </svg>
+                            <span>Figma</span>
+                        </a>
+    
+                    </ul><!-- ./social_links -->
+                </div><!-- ./mobile_nav_content -->
+    
+            </nav>
+            <!-- desk nav bar end -->
+        <!-- ############################################################## -->
+    
+           
+        </header>
+
     <main>
-        <section id="contact" class=" absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
-            <div class="conatiner">
-                <div class="content bg-super_light_gray rounded-2xl grid_system">
-                    <div class="text col-span-6">
-                        <div class="flex justify-center items-center gap-6">
-                            <span class="line bg-gray inline-block"></span>
-                            <span class="uppercase text-gray text-base font-bold">contact</span>
+        <section id="contact" class="downforamts_box contact">
+            <div class="container">
+                <div class="box bg-super_light_gray rounded-2xl sm:flex ">
+                    <div class="sm:w-1/2 text_content my-12 sm:my-0 sm:col-span-6">
+                        <div class="flex items-center gap-6 pb-4">
+                            <span class="hidden sm:block bg-gray"></span>
+                            <span class="  font-bold text-sm sm:text-base text-gray">CONTACT</span>
                         </div>
-                    </div><!-- ./text -->
-                    <div class="form col-span-6">
-                    </div><!-- ./form -->
+    
+                        <div class="">
+                            <h3 class=" font-bold text-black pb-8">For more information, please feel free to contact us. </h3>
+                            <p class="text-black font-normal text-sm">If you need any help or you have an enquiry, our direct message box is at your disposal. </p>
+                        </div>
+                    </div><!-- ./text_content -->
+                    <div class="sm:w-1/2 form_content  sm:col-span-6">
+                        <form action="" class="w-full flex flex-col gap-4">
+                            <div class="name_cont flex flex-col gap-2">
+                                <input required type="text" name="name" id="input_name" placeholder="Name">
+                                <span id="name_msg" class="hidden opacity-0 invisible text-xs font-normal">Please insert correct information.</span>
+                            </div>
+                            <div class="email_cont flex flex-col gap-2">
+                                <input required type="email" name="email" id="input_email" placeholder="Email">
+                                <span id="valide_msg" class="hidden opacity-0 invisible text-xs font-normal">Please insert correct information.</span>
+                            
+                            </div>
+                            <div class="select_inp relative w-full flex justify-between items-center">
+                                <input required disabled class="w-full" type="text" name="subject" id="input_subject" placeholder="Subject">
+                                <div id="select_subj_btn">
+                                    <img src="./img/icons/arrow_down_icons.svg" alt="">
+
+                                </div>
+                                <div id="subjects_list_div" class=" opacity-0 invisible select_list_container transition rounded-2xl bg-white absolute left-0 right-0 drop-shadow-contact_drop_shadow ">
+                                    <ul class="flex flex-col">
+                                        <li>Give a note / opinion</li>
+                                        <li class="subject_item_active">Icons review</li>
+                                        <li>Service request</li>
+                                        <li>Other…</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="message_cont">
+                                <textarea   required name="message" id="message_inp" cols="30" rows="10" placeholder="Message"></textarea>
+                                <span id="text_msg" class="hidden opacity-0 invisible text-xs font-normal">Please insert correct information.</span>
+
+                            </div>
+                            <button id="send_message_contact_btn" class="bg-blue hover:bg-dark_blue transition flex justify-center items-center w-full sm:w-48 " type="submit">
+                                <img src="./img/icons/send-Bold_1_.png" alt="">
+                                <span class="font-semibold text-sm text-white">
+                                    SEND MESSAGE
+                                </span>
+                            </button>
+                            
+                      
+                        </form>
+                    </div>
+                    </div><!-- ./icons_content -->
                 </div>
             </div>
         </section>
         
     </main>
+
+
+    <footer class="space_y">
+        <div class="line_under_nav bg-light_ray"></div>
+        <div class="container">
+            <div class="footer_container grid_system">
+                <div class="py-12 sm:py-0 footer_links grid_system sm:border-r-1 sm:border-light_ray ">
+                    <div class="hidden sm:block inner_links">
+                        <h4 class="footer_title">Company</h4>
+                        
+                            <ul class="links flex flex-col hover_transition">
+                                <li>
+                                    
+                                    <a href="./index.html" class="flex items-center gap-4">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                            <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                        </svg>
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    
+                                    <a href="./index.html#about">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                            <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                        </svg>
+                                        <span>About</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    
+                                    <a href="./index.html#formats">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                            <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                        </svg>
+                                        <span>Formats</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    
+                                    <a href="./index.html#download">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                            <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                        </svg>
+                                        <span>Download</span>
+                                    </a>
+                                </li>
+                                <li>
+    
+                                    <a href="./contact.html" class="">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                            <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                        </svg>   
+                                        <span>Contact</span>
+                                    </a>
+                                </li>
+            
+                            </ul><!-- ./site_links -->
+                        
+                    </div><!-- ./inner_links -->
+                    <div class="social_links">
+                        <h4 class="footer_title">social media</h4>
+                        
+                        <ul class="links ">
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                        <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                    </svg>
+                                    <div>
+                                        <span class="social_title">Twitter</span>
+                                        <span>@magicoonLibrary</span>
+    
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                        <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                    </svg>
+                                    <div>
+                                        <span class="social_title">Instagram</span>
+                                        <span>@magicoonLibrary</span>
+    
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                        <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                    </svg>
+                                    <div>
+                                        <span class="social_title">Drible</span>
+                                        <span>@magicoonLibrary</span>
+    
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                        <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                    </svg>
+                                    <div>
+                                        <span class="social_title">Behance</span>
+                                        <span>@magicoonLibrary</span>
+    
+                                    </div>
+                                </a>
+                            </li>
+    
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                        <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)" />
+                                    </svg>
+                                    <div>
+                                        <span class="social_title">Figma</span>
+                                        <span>@SeyfDesigner</span>
+    
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div><!-- ./social_links -->
+                </div>
+                <div class="sm:hidden line_under_nav bg-light_ray"></div>
+    
+                <div class="py-12 sm:py-0 footer_subscription">
+                    <h4 class="footer_title">Subscribe</h4>
+                    <p>
+                        Stay close and subscribe to our website to receive the latest and newest updates on our icons. 
+                    </p>
+                    <div class="footer_send_mail  lg:pr-14 mt-5 mb-5 sm:mb-11">
+                        <form action="" class=" border-2 border-light_ray rounded-3xl">
+                            <div class="form_container flex h-full justify-between items-center pr-2 pl-6">
+                                <input type="email" placeholder="Your Email.." class=" placeholder-gray caret-gray text-sm bg-white text-black font-normal">
+                                <button type="submit" class="bg-blue hover:bg-dark_blue hover_transition w-8 h-8 grid place-content-center rounded-full">
+                                    <img src="./img/icons/arrow_right.png" alt="">
+                                </button>
+                            </div>
+                        </form>
+    
+                    </div>
+                    <h4 class=" mt-6 mb-5 sm:mb-5 sm:mt-11 font-bold text-black text-sm">Email</h4>
+                    <span id="email_address_text">Contact@magicoon.com</span>
+    
+                </div>
+            </div>  
+        </div>
+        <div class="line_under_nav bg-light_ray"></div>
+        <div class="container">
+            <div class="last_footer py-6 flex flex-col sm:flex-row justify-center sm:justify-between items-center">
+                <span class="font-normal text-xs text-gray">© 2022 magicoon. All Rights Reserved</span>
+                <div class="text-xs flex items-center">
+                    <span class="text-gray font-normal flex gap-1 items-center">Made in 
+                        <img id="dz_flag_footer" class=" ml-1" src="./img/icons/dz_flag.svg" alt="dz">
+                    </span>
+                    <span class="text-gray font-normal  mx-1">by</span>    
+                    <a href="#" class="text-black hover:text-blue transition  font-semibold">Seyfeddine B.</a></div>
+            </div>
+        </div>
+    </footer>
 </body>
+<script src="./main.js"></script>
+<script>
+    // this div contain all elemnts inp list of items and all 
+    // so when clicking on any item in the list you'r click on this div 
+    // so dont make toggle class list to close the item list 
+    // because if you do you will face a probleme (the list toglled two times)
+    // 
+    const select_inp_div_container = document.querySelector('.select_inp');
+    const subjects_list_div = document.getElementById('subjects_list_div');
+    const select_subj_btn = document.getElementById('select_subj_btn');
+    const subjects_list = document.querySelectorAll('#subjects_list_div ul li');
+    const input_subject = document.getElementById('input_subject');
+
+    //select_subj_btn.addEventListener('click',toggle_subject_list);
+    select_inp_div_container.addEventListener('click',toggle_subject_list);
+    function toggle_subject_list(){
+        subjects_list_div.classList.toggle('list_active');
+    }
+    function style_all_subj_items(){
+        subjects_list.forEach(item =>{
+            if(item === active_subject){
+                item.style.color = '#3772FF'; // blue
+
+            }
+            else{
+
+                item.style.color = '#23262F'; // black
+            }
+        });
+
+    }
+    
+    var active_subject;
+    subjects_list.forEach((subject) => {
+        subject.onclick = function(){
+            active_subject = subject;
+            input_subject.setAttribute('value',subject.textContent);
+            style_all_subj_items();
+        }
+        
+    });
+
+
+
+    // email validation:
+    function validateEmail(email) {
+        return String(email)
+          .toLowerCase()
+          .match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+      };
+    function validateName(name){
+        name = name.trim()
+        if (name==null || name==""){  
+            return false;  
+        }
+        else{
+             return true;
+        }
+    }
+
+    function validateMessage(mess){
+        if(validateName(mess)){
+            if(mess.length >= 10){
+                return true
+            }
+            else{
+                return false
+            }
+        }else{
+            return false;
+        }
+    }
+
+    const email_input = document.getElementById('input_email');
+    const valide_msg = document.getElementById('valide_msg');
+    email_input.addEventListener('input',(inp) => {
+        if(validateEmail(inp.target.value)){
+            email_input.classList.remove('inp_no_valide');
+            valide_msg.classList.remove('list_active');
+            valide_msg.classList.add('hidden');
+
+        }
+        else{
+            email_input.classList.add('inp_no_valide')
+            valide_msg.classList.add('list_active');
+            valide_msg.classList.remove('hidden');
+            
+
+        }
+    })
+    
+    const name_inp = document.getElementById('input_name');
+    const name_msg = document.getElementById('name_msg');
+    name_inp.addEventListener('input',(inp) => {
+        if(validateName(inp.target.value)){
+            name_inp.classList.remove('inp_no_valide');
+            name_msg.classList.remove('list_active');
+            name_msg.classList.add('hidden');
+        }else{
+            name_inp.classList.add('inp_no_valide');
+            name_msg.classList.add('list_active');
+            name_msg.classList.remove('hidden');
+        }
+    });
+
+
+    const message_inp = document.getElementById('message_inp');
+    const text_msg = document.getElementById('text_msg');
+
+    message_inp.addEventListener('input',(inp) => {
+        if(validateMessage(inp.target.value)){
+            message_inp.classList.remove('inp_no_valide');
+            text_msg.classList.remove('list_active');
+            text_msg.classList.add('hidden');
+        }
+        else{
+            message_inp.classList.add('inp_no_valide');
+            text_msg.classList.add('list_active');
+            text_msg.classList.remove('hidden');
+        }
+    })
+
+
+
+</script>
 </html>
