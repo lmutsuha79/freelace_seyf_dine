@@ -57,7 +57,7 @@
             
             <div class="mobile_nav_content container">
                 <div class="page_links flex flex-col">
-                    <a href="#">Start</a>
+                    <a href="#hero">Start</a>
                     <a href="#about">About</a>
                     <a href="#formats">Foramts</a>
                     <a href="#download">Download</a>
@@ -658,8 +658,8 @@
  
 </body>
 
-
 <script>
+    // {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{    nav     }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
     var mb_nav = document.getElementById('mb_nav');
     var mb_nav_btn = document.getElementById('mb_nav_btn');
     var close_nav_btn = document.getElementById('close_nav_btn');
@@ -679,9 +679,7 @@
         close_nav_btn.classList.toggle('hide_nav_btn');
     
     }
-
-
-
+// {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 
     // slider code start
 
@@ -906,6 +904,8 @@
         // change color of links when scrolling over section
     const sections = document.querySelectorAll('section');
     const nav_links = document.querySelectorAll('.desk_nav .nav_links ul > a');
+    const mb_nav_links_a = document.querySelectorAll('#mb_nav .page_links a');
+
     let current_id_section;
     this.onscroll = function(){
         sections.forEach((section) => {
@@ -918,10 +918,15 @@
             item.classList.remove('activ_nav_link');
             if(item.getAttribute('href').substring(1) == current_id_section){
                 item.classList.add('activ_nav_link');
-            }
+            }   
+        });
 
-            
-        })
+        mb_nav_links_a.forEach((item) => {
+            item.classList.remove('activ_nav_link');
+            if(item.getAttribute('href').substring(1) == current_id_section){
+                item.classList.add('activ_nav_link');
+            }   
+        });
 
         
     }

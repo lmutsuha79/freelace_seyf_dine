@@ -96,7 +96,9 @@ h3{
 
 /* desk nav start */
 @layer components{
-    .activ_nav_link {
+    #mb_nav .page_links >a.activ_nav_link,
+    .desk_nav ul >a.activ_nav_link
+    {
         @apply text-black
     }
     .nav_links ul >a:not(.contact_desk_nav_btn):hover{
@@ -155,9 +157,9 @@ h3{
     #mb_nav .page_links a {
         @apply text-sm font-semibold text-gray hover:text-black transition-colors ease-in ;
     }
-    #mb_nav .page_links a:first-child {
+    /* #mb_nav .page_links a:first-child {
         @apply text-black;
-    }
+    } */
 }
 
 @layer components{
@@ -680,3 +682,6 @@ footer .footer_container{
         padding-top: 110px;
     }
 }
+
+
+

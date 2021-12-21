@@ -130,20 +130,23 @@
                                 <span id="valide_msg" class="hidden opacity-0 invisible text-xs font-normal">Please insert correct information.</span>
                             
                             </div>
-                            <div class="select_inp relative w-full flex justify-between items-center">
-                                <input required disabled class="w-full" type="text" name="subject" id="input_subject" placeholder="Subject">
-                                <div id="select_subj_btn">
-                                    <img src="./img/icons/arrow_down_icons.svg" alt="">
+                            <div class="subj_cont">
+                                <div class="select_inp relative w-full flex justify-between items-center">
+                                    <input required disabled class="w-full" type="text" name="subject" id="input_subject" placeholder="Subject">
+                                    <div id="select_subj_btn">
+                                        <img src="./img/icons/arrow_down_icons.svg" alt="">
+                                    </div>
+                                    <div id="subjects_list_div" class=" opacity-0 invisible select_list_container transition rounded-2xl bg-white absolute left-0 right-0 drop-shadow-contact_drop_shadow ">
+                                        <ul class="flex flex-col">
+                                            <li>Give a note / opinion</li>
+                                            <li class="subject_item_active">Icons review</li>
+                                            <li>Service request</li>
+                                            <li>Other…</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <span id="valide_subj" class="hidden opacity-0 invisible text-xs font-normal">Please insert correct information.</span>
 
-                                </div>
-                                <div id="subjects_list_div" class=" opacity-0 invisible select_list_container transition rounded-2xl bg-white absolute left-0 right-0 drop-shadow-contact_drop_shadow ">
-                                    <ul class="flex flex-col">
-                                        <li>Give a note / opinion</li>
-                                        <li class="subject_item_active">Icons review</li>
-                                        <li>Service request</li>
-                                        <li>Other…</li>
-                                    </ul>
-                                </div>
                             </div>
                             <div class="message_cont">
                                 <textarea   required name="message" id="message_inp" cols="30" rows="10" placeholder="Message"></textarea>
@@ -346,6 +349,7 @@
     const subjects_list_div = document.getElementById('subjects_list_div');
     const select_subj_btn = document.getElementById('select_subj_btn');
     const subjects_list = document.querySelectorAll('#subjects_list_div ul li');
+    console.log(subjects_list)
     const input_subject = document.getElementById('input_subject');
 
     //select_subj_btn.addEventListener('click',toggle_subject_list);
@@ -458,6 +462,7 @@
             text_msg.classList.remove('hidden');
         }
     })
+
 
 
 

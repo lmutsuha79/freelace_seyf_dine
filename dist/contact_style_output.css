@@ -1113,7 +1113,7 @@ video {
 .select_list_container ul{
     gap: 1px;
 }
-.list_active{
+#contact form .list_active{
     opacity: 1;
     visibility: visible;
     
