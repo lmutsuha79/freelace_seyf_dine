@@ -14,7 +14,7 @@
 </head>
 
 
-<body class="bg-white font-mainFont">
+<body>
     
     <header id="nav_header" class="bg-white fixed z-99 top-0 left-0 right-0">
     <!-- ############################################################## -->
@@ -624,7 +624,7 @@
                 <div class="footer_send_mail  lg:pr-14 mt-5 mb-5 sm:mb-11">
                     <form action="" class=" border-2 border-light_ray rounded-3xl">
                         <div class="form_container flex h-full justify-between items-center pr-2 pl-6">
-                            <input type="email" placeholder="Your Email.." class=" placeholder-gray caret-gray text-sm bg-white text-black font-normal">
+                            <input required type="email" placeholder="Your Email.." class=" placeholder-gray caret-gray text-sm bg-white text-black font-normal">
                             <button type="submit" class="bg-blue hover:bg-dark_blue hover_transition w-8 h-8 grid place-content-center rounded-full">
                                 <img src="./img/icons/arrow_right.png" alt="">
                             </button>
@@ -682,9 +682,9 @@
 // {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 
     // slider code start
+// {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{     slider      }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
 
     const slider_timer = 2000;
-
     const slider_icons_title = document.getElementById('slider_icons_title');
     const slider_icons_title_list = ['Light', 'Regular', 'Bold', 'Solid']
 
@@ -901,7 +901,9 @@
     // slider code end 
 
 
-        // change color of links when scrolling over section
+// {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{     nav_style when scroll       }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+      
+// change color of links when scrolling over section
     const sections = document.querySelectorAll('section');
     const nav_links = document.querySelectorAll('.desk_nav .nav_links ul > a');
     const mb_nav_links_a = document.querySelectorAll('#mb_nav .page_links a');

@@ -9,6 +9,9 @@
 @tailwind utilities;
 
 @layer components{
+    body{
+        @apply bg-white font-mainFont
+    }
     a{
         @apply transition p-5px
     }
@@ -183,12 +186,12 @@ h3{
 /* hero section start */
 
 @keyframes scroll_background{
-    /* 0%{
+    0%{
         background-position: 0 0;
     }
     100%{
-        background-position: -500px 0;
-    } */
+        background-position: -2420px  0;
+    }
 }
 .hero_content{
     background-repeat: repeat-x;
@@ -535,6 +538,7 @@ h3{
 .slider .slide_content{
     max-width: 480px;
     max-height: 248px;
+    overflow-x: hidden;
 }
 
 .slider .slide_contorler{
@@ -549,10 +553,7 @@ h3{
     border: 0px;
 }
 
-.slide_content{
-    overflow-x: hidden;
-    height: 248px;
-}
+
 .user_view_port{
     display: flex;
     width: 600%;

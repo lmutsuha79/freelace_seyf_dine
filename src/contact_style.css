@@ -8,6 +8,7 @@
     .grid_system{
         @apply grid grid-cols-12
     }
+   
     
 }
 .grid_system{
@@ -83,6 +84,9 @@
 
         
     }   
+    .form_content input.subject_inp_border_blue{
+        @apply border-blue
+    }
     .inp_no_valide{
          @apply border-red-600
     }
@@ -93,7 +97,7 @@
 #contact .form_content .inp_no_valide{
     border-color: #EF466F;
 }
-#valide_msg, #name_msg, #text_msg{
+#valide_msg, #name_msg, #text_msg,#valide_subj{
     color: #EF466F;
 }
 

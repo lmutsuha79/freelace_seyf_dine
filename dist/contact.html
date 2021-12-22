@@ -16,7 +16,7 @@
         <!-- ############################################################## -->
             <!-- desk nav bar start -->
             <nav class="desk_nav container flex flex-nowrap flex-row items-center justify-between ">
-                <a class="logo p-5px" href="#">
+                <a class="logo p-5px" href="./index.html">
                     <img src="./img/logo.svg" alt="logo" draggable="false" class=" w-full h-full">
                 </a><!-- ./logo_img -->
     
@@ -120,7 +120,7 @@
                         </div>
                     </div><!-- ./text_content -->
                     <div class="sm:w-1/2 form_content  sm:col-span-6">
-                        <form action="" class="w-full flex flex-col gap-4">
+                        <form id="send_mess_form" action="" class="w-full flex flex-col gap-4">
                             <div class="name_cont flex flex-col gap-2">
                                 <input required type="text" name="name" id="input_name" placeholder="Name">
                                 <span id="name_msg" class="hidden opacity-0 invisible text-xs font-normal">Please insert correct information.</span>
@@ -345,18 +345,34 @@
     // so dont make toggle class list to close the item list 
     // because if you do you will face a probleme (the list toglled two times)
     // 
+    const send_mess_form = document.getElementById('send_mess_form');
     const select_inp_div_container = document.querySelector('.select_inp');
     const subjects_list_div = document.getElementById('subjects_list_div');
     const select_subj_btn = document.getElementById('select_subj_btn');
     const subjects_list = document.querySelectorAll('#subjects_list_div ul li');
-    console.log(subjects_list)
     const input_subject = document.getElementById('input_subject');
+    const valide_subj = document.getElementById('valide_subj');
 
-    //select_subj_btn.addEventListener('click',toggle_subject_list);
+    window.addEventListener('click', function(e){   
+        
+        if(e.target != input_subject){
+            subjects_list_div.classList.remove('list_active');
+
+        }
+     
+      });
+    
+
+
+    input_subject.addEventListener('focus',toggle_subject_list);
     select_inp_div_container.addEventListener('click',toggle_subject_list);
     function toggle_subject_list(){
+        input_subject.classList.toggle('subject_inp_border_blue')
         subjects_list_div.classList.toggle('list_active');
+        remove_allert(input_subject,valide_subj);
     }
+ 
+
     function style_all_subj_items(){
         subjects_list.forEach(item =>{
             if(item === active_subject){
@@ -374,16 +390,23 @@
     var active_subject;
     subjects_list.forEach((subject) => {
         subject.onclick = function(){
+
+
             active_subject = subject;
             input_subject.setAttribute('value',subject.textContent);
             style_all_subj_items();
+
+            //valide_subj.classList.remove('list_active');
         }
         
     });
 
 
 
-    // email validation:
+
+
+// {{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{{       inputs validation       }}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}}
+    // functions of validation only (general):
     function validateEmail(email) {
         return String(email)
           .toLowerCase()
@@ -400,7 +423,6 @@
              return true;
         }
     }
-
     function validateMessage(mess){
         if(validateName(mess)){
             if(mess.length >= 10){
@@ -414,54 +436,94 @@
         }
     }
 
-    const email_input = document.getElementById('input_email');
-    const valide_msg = document.getElementById('valide_msg');
-    email_input.addEventListener('input',(inp) => {
-        if(validateEmail(inp.target.value)){
-            email_input.classList.remove('inp_no_valide');
-            valide_msg.classList.remove('list_active');
-            valide_msg.classList.add('hidden');
-
+    // #####################################
+    // functions of inputs validation
+    function email_input_validation(){
+        if(validateEmail(email_input.value)){
+       
+            remove_allert(email_input,valide_msg);
         }
         else{
-            email_input.classList.add('inp_no_valide')
-            valide_msg.classList.add('list_active');
-            valide_msg.classList.remove('hidden');
-            
+            add_allert(email_input,valide_msg);
+        }
+    }
+    function name_input_validation(){
+        if(validateName(name_inp.value)){
+            remove_allert(name_inp,name_msg);
+        }else{
+            add_allert(name_inp,name_msg);
 
         }
-    })
+    }
+    function message_input_validation(){
+        if(validateMessage(message_inp.value)){
+            remove_allert(message_inp,text_msg);
+        }
+        else{
+            add_allert(message_inp,text_msg);
+
+        }
+    }
+    function subjects_input_validation(){
+        if(input_subject.value === ''){
+            
+            add_allert(input_subject,valide_subj);
+
+        }else{
+            remove(input_subject,valide_subj);
+
+        }
+    }
+
+
+
+
+
+    const email_input = document.getElementById('input_email');
+    const valide_msg = document.getElementById('valide_msg'); // email validation message var
+    email_input.addEventListener('focusout',email_input_validation);
+    email_input.addEventListener('focusin',() => remove_allert(email_input,valide_msg));
+    
     
     const name_inp = document.getElementById('input_name');
-    const name_msg = document.getElementById('name_msg');
-    name_inp.addEventListener('input',(inp) => {
-        if(validateName(inp.target.value)){
-            name_inp.classList.remove('inp_no_valide');
-            name_msg.classList.remove('list_active');
-            name_msg.classList.add('hidden');
-        }else{
-            name_inp.classList.add('inp_no_valide');
-            name_msg.classList.add('list_active');
-            name_msg.classList.remove('hidden');
-        }
+    const name_msg = document.getElementById('name_msg'); // name validation message var
+    name_inp.addEventListener('focusout',name_input_validation);
+    name_inp.addEventListener('focusin',() => remove_allert(name_inp,name_msg));
+
+    
+
+    const message_inp = document.getElementById('message_inp');
+    const text_msg = document.getElementById('text_msg'); // text message validation message var
+    message_inp.addEventListener('focusout',message_input_validation);
+    message_inp.addEventListener('focusin',() => remove_allert(message_inp,text_msg));
+
+
+   
+    
+    
+
+    function remove_allert(the_input,validation_mess){
+
+        the_input.classList.remove('inp_no_valide');
+        validation_mess.classList.remove('list_active');
+        validation_mess.classList.add('hidden');
+    }
+    function add_allert(the_input,validation_mess){
+        the_input.classList.add('inp_no_valide');
+        validation_mess.classList.add('list_active');
+        validation_mess.classList.remove('hidden');
+    }
+
+    send_mess_form.addEventListener('submit',(event) => {
+        email_input_validation();
+        name_input_validation();
+        message_input_validation();  
+        subjects_input_validation();
+        event.preventDefault();      
     });
 
 
-    const message_inp = document.getElementById('message_inp');
-    const text_msg = document.getElementById('text_msg');
-
-    message_inp.addEventListener('input',(inp) => {
-        if(validateMessage(inp.target.value)){
-            message_inp.classList.remove('inp_no_valide');
-            text_msg.classList.remove('list_active');
-            text_msg.classList.add('hidden');
-        }
-        else{
-            message_inp.classList.add('inp_no_valide');
-            text_msg.classList.add('list_active');
-            text_msg.classList.remove('hidden');
-        }
-    })
+    
 
 
 

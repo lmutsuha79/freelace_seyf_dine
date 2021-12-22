@@ -737,6 +737,11 @@ video {
 		padding: 0px 20px;
 	}
 }
+body{
+	--tw-bg-opacity: 1;
+	background-color: rgba(252, 252, 253, var(--tw-bg-opacity));
+	font-family: Poppins;
+}
 a{
 	padding: 5px;
 	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter;
@@ -1358,9 +1363,6 @@ footer .links .social_title:hover{
 .text-center{
 	text-align: center;
 }
-.font-mainFont{
-	font-family: Poppins;
-}
 .text-sm{
 	font-size: 0.875rem;
 	line-height: 1.25rem;
@@ -1553,21 +1555,21 @@ h3{
 /* hero section start */
 
 @-webkit-keyframes scroll_background{
-    /* 0%{
+    0%{
         background-position: 0 0;
     }
     100%{
-        background-position: -500px 0;
-    } */
+        background-position: -2420px  0;
+    }
 }
 
 @keyframes scroll_background{
-    /* 0%{
+    0%{
         background-position: 0 0;
     }
     100%{
-        background-position: -500px 0;
-    } */
+        background-position: -2420px  0;
+    }
 }
 .hero_content{
     background-repeat: repeat-x;
@@ -1830,6 +1832,7 @@ h3{
 .slider .slide_content{
     max-width: 480px;
     max-height: 248px;
+    overflow-x: hidden;
 }
 
 .slider .slide_contorler{
@@ -1844,10 +1847,7 @@ h3{
     border: 0px;
 }
 
-.slide_content{
-    overflow-x: hidden;
-    height: 248px;
-}
+
 .user_view_port{
     display: flex;
     width: 600%;
