@@ -536,8 +536,8 @@ h3{
     }
 }
 .slider .slide_content{
-    max-width: 480px;
-    max-height: 248px;
+    /* max-width: 480px;
+    max-height: 248px; */
     overflow-x: hidden;
 }
 
