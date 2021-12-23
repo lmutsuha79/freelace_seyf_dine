@@ -19,8 +19,18 @@
 .downforamts_box .box{
     gap: 30px;
 }
+@media screen and (max-width: 992px) {
+    .downforamts_box .box .text_content{
+        margin-bottom: 60px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .downforamts_box .box .text_content{
+        margin-bottom: 48px;
+    }
+}
 .contact .box {
-    padding: 90px 60px 90px 45px;
+    padding: 60px 60px 60px 45px;
 
 }
 .downforamts_box .box .text_content div:first-child span:first-child{
@@ -93,8 +103,8 @@
     }
 }
 #contact{
-    margin-top: calc(100px + 90px);
-    margin-bottom: 90px;
+    margin-top: calc(100px + 60px);
+    margin-bottom: 60px;
 }
 @media screen and (max-width: 768px) {
     #contact{

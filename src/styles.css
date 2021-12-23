@@ -668,9 +668,9 @@ footer .footer_container{
     height: 50px;
 }
 .footer_send_mail form input{
-    border: none;
-    outline: none;
-    width: 90%;
+    /* border: none; */
+    /* outline: none; */
+    /* width: 90%; */
 }
 
 
@@ -682,6 +682,30 @@ footer .footer_container{
     .space_y{
         padding-top: 110px;
     }
+}
+
+
+#valide_email_subs{
+    color: #EF466F;
+}     
+ .footer_send_mail .inp_no_valide{
+    border-color: #EF466F;
+}
+.footer_send_mail .list_active{
+    opacity: 1;
+    visibility: visible;
+}
+@layer components {
+    #send_mail_inp.inp_no_valide{
+        @apply border-red_color
+   }
+   #send_mail_inp{
+    @apply w-full rounded-3xl py-4 px-5 placeholder-gray caret-black text-sm outline-none
+    border-2 border-light_ray bg-white
+    default:border-light_ray default:bg-white
+    active:border-light_ray active:bg-super_light_gray
+    focus:border-blue focus:bg-white
+   }
 }
 
 
