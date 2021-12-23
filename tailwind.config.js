@@ -30,7 +30,8 @@ module.exports = {
         dark_blue: "#0045EA",
         border_color_green: "#00D3A1",
         border_color_gray: "#707070",
-        green: "#45B26B"
+        green: "#45B26B",
+        red_color: "#EF466F"
       },
       borderWidth: {
         '1': '1px',

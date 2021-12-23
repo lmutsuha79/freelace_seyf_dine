@@ -107,8 +107,8 @@
     <main>
         <section id="contact" class="downforamts_box contact">
             <div class="container">
-                <div class="box bg-super_light_gray rounded-2xl sm:flex ">
-                    <div class="sm:w-1/2 text_content my-12 sm:my-0 sm:col-span-6">
+                <div class="box bg-super_light_gray rounded-2xl md:flex ">
+                    <div class="md:w-1/2 text_content my-12 md:my-0 md:col-span-6">
                         <div class="flex items-center gap-6 pb-4">
                             <span class="hidden sm:block bg-gray"></span>
                             <span class="  font-bold text-sm sm:text-base text-gray">CONTACT</span>
@@ -119,23 +119,23 @@
                             <p class="text-black font-normal text-sm">If you need any help or you have an enquiry, our direct message box is at your disposal. </p>
                         </div>
                     </div><!-- ./text_content -->
-                    <div class="sm:w-1/2 form_content  sm:col-span-6">
-                        <form id="send_mess_form" action="" class="w-full flex flex-col gap-4">
+                    <div class="md:w-1/2 form_content  md:col-span-6">
+                        <form onsubmit="event.preventDefault()" id="send_mess_form" action="" class="w-full flex flex-col gap-4">
                             <div class="name_cont flex flex-col gap-2">
                                 <input autocomplete="off" required type="text" name="name" id="input_name" placeholder="Name">
                                 <span id="name_msg" class="hidden opacity-0 invisible text-xs font-normal">Please insert correct information.</span>
                             </div>
                             <div class="email_cont flex flex-col gap-2">
-                                <input autocomplete="off" required type="email" name="email" id="input_email" placeholder="Email">
+                                <input autocomplete="off"  type="email" name="email" id="input_email" placeholder="Email">
                                 <span id="valide_msg" class="hidden opacity-0 invisible text-xs font-normal">Please insert correct information.</span>
                             
                             </div>
                             <div class="subj_cont">
                                 <div class="select_inp relative w-full flex justify-between items-center">
-                                    <input autocomplete="off" required disabled class="w-full" type="text" name="subject" id="input_subject" placeholder="Subject">
-                                    <div id="select_subj_btn">
-                                        <img src="./img/icons/arrow_down_icons.svg" alt="">
-                                    </div>
+                                    <input autocomplete="off"   class=" cursor-pointer w-full" type="text" name="subject" id="input_subject" placeholder="Subject">
+                                    
+                                    <img id="select_subj_btn" src="./img/icons/arrow_down_icons.svg" alt="">
+                                    
                                     <div id="subjects_list_div" class=" opacity-0 invisible select_list_container transition rounded-2xl bg-white absolute left-0 right-0 drop-shadow-contact_drop_shadow ">
                                         <ul class="flex flex-col">
                                             <li>Give a note / opinion</li>
@@ -149,7 +149,7 @@
 
                             </div>
                             <div class="message_cont">
-                                <textarea   required name="message" id="message_inp" cols="30" rows="10" placeholder="Message"></textarea>
+                                <textarea    name="message" id="message_inp" cols="30" rows="10" placeholder="Message"></textarea>
                                 <span id="text_msg" class="hidden opacity-0 invisible text-xs font-normal">Please insert correct information.</span>
 
                             </div>
@@ -171,7 +171,7 @@
     </main>
 
 
-    <footer class="space_y">
+    <footer class="">
         <div class="line_under_nav bg-light_ray"></div>
         <div class="container">
             <div class="footer_container grid_system">
@@ -353,10 +353,12 @@
     const input_subject = document.getElementById('input_subject');
     const valide_subj = document.getElementById('valide_subj');
 
+   
     window.addEventListener('click', function(e){   
         
         if(e.target != input_subject){
             subjects_list_div.classList.remove('list_active');
+            input_subject.classList.remove('subject_inp_border_blue')
 
         }
      
@@ -364,12 +366,23 @@
     
 
 
-    input_subject.addEventListener('focus',toggle_subject_list);
+    input_subject.addEventListener('focusin',()=>{
+        remove_allert(input_subject,valide_subj);
+        input_subject.classList.add('subject_inp_border_blue')
+        input_subject.disabled = true; 
+    });
+    input_subject.addEventListener('focusout',()=>{
+        console.log('focus out ')
+       // input_subject.classList.remove('subject_inp_border_blue')
+    });
+
+
+   
     select_inp_div_container.addEventListener('click',toggle_subject_list);
     function toggle_subject_list(){
-        input_subject.classList.toggle('subject_inp_border_blue')
         subjects_list_div.classList.toggle('list_active');
-        remove_allert(input_subject,valide_subj);
+        //remove_allert(input_subject,valide_subj);
+        input_subject.disabled = false;
     }
  
 
@@ -425,12 +438,7 @@
     }
     function validateMessage(mess){
         if(validateName(mess)){
-            if(mess.length >= 10){
-                return true
-            }
-            else{
-                return false
-            }
+            return true;
         }else{
             return false;
         }
@@ -451,6 +459,7 @@
         if(validateName(name_inp.value)){
             remove_allert(name_inp,name_msg);
         }else{
+            name_inp.value = ''
             add_allert(name_inp,name_msg);
 
         }
@@ -460,6 +469,7 @@
             remove_allert(message_inp,text_msg);
         }
         else{
+            message_inp.value = '';
             add_allert(message_inp,text_msg);
 
         }
@@ -470,7 +480,7 @@
             add_allert(input_subject,valide_subj);
 
         }else{
-            remove(input_subject,valide_subj);
+            remove_allert(input_subject,valide_subj);
 
         }
     }
@@ -481,20 +491,20 @@
 
     const email_input = document.getElementById('input_email');
     const valide_msg = document.getElementById('valide_msg'); // email validation message var
-    email_input.addEventListener('focusout',email_input_validation);
+    //email_input.addEventListener('focusout',email_input_validation);
     email_input.addEventListener('focusin',() => remove_allert(email_input,valide_msg));
     
     
     const name_inp = document.getElementById('input_name');
     const name_msg = document.getElementById('name_msg'); // name validation message var
-    name_inp.addEventListener('focusout',name_input_validation);
+    //name_inp.addEventListener('focusout',name_input_validation);
     name_inp.addEventListener('focusin',() => remove_allert(name_inp,name_msg));
 
     
 
     const message_inp = document.getElementById('message_inp');
     const text_msg = document.getElementById('text_msg'); // text message validation message var
-    message_inp.addEventListener('focusout',message_input_validation);
+    //message_inp.addEventListener('focusout',message_input_validation);
     message_inp.addEventListener('focusin',() => remove_allert(message_inp,text_msg));
 
 
@@ -515,11 +525,11 @@
     }
 
     send_mess_form.addEventListener('submit',(event) => {
+        
         email_input_validation();
         name_input_validation();
         message_input_validation();  
         subjects_input_validation();
-        event.preventDefault();      
     });
 
 

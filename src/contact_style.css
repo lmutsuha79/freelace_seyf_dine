@@ -11,9 +11,9 @@
    
     
 }
-.grid_system{
+/* .grid_system{
     gap: 30px;
-}
+} */
 /* ##################################### */
 
 .downforamts_box .box{
@@ -89,12 +89,20 @@
         @apply border-blue
     }
     .inp_no_valide{
-         @apply border-red-600
+         @apply border-red_color
     }
 }
 #contact{
-    margin-top: 190px;
+    margin-top: calc(100px + 90px);
+    margin-bottom: 90px;
 }
+@media screen and (max-width: 768px) {
+    #contact{
+        margin-top: calc(75px + 48px);
+        margin-bottom: 48px;
+    }
+}
+
 #contact .form_content .inp_no_valide{
     border-color: #EF466F;
 }
@@ -112,10 +120,11 @@
 }
 .form_content .select_inp img{
     position: absolute;
-    top: calc(50% - 10px);
+    /* top: calc(50% - 10px); */
+    top: 50%;
     right: 15px;
     cursor: pointer;
-    padding: 10px;
+    /* padding: 10px; */
 }
 .select_list_container{
     height: 200px;
