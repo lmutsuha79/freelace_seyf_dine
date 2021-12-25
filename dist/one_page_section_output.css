@@ -95,9 +95,7 @@ section{
 /* @tailwind utilities; */
 
 section{
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+    width: 100%;
 }
 
 h2{
