@@ -259,24 +259,24 @@
 .hover\:border-none:hover{
     border-style: none;
 }
-.hover\:bg-dark_blue:hover{
-    --tw-bg-opacity: 1;
-    background-color: rgba(0, 69, 234, var(--tw-bg-opacity));
-}
 .hover\:bg-black:hover{
     --tw-bg-opacity: 1;
     background-color: rgba(35, 38, 47, var(--tw-bg-opacity));
 }
+.hover\:bg-dark_blue:hover{
+    --tw-bg-opacity: 1;
+    background-color: rgba(0, 69, 234, var(--tw-bg-opacity));
+}
 .hover\:fill-\[\#777E90\]:hover{
     fill: #777E90;
-}
-.hover\:text-blue:hover{
-    --tw-text-opacity: 1;
-    color: rgba(55, 114, 255, var(--tw-text-opacity));
 }
 .hover\:text-white:hover{
     --tw-text-opacity: 1;
     color: rgba(252, 252, 253, var(--tw-text-opacity));
+}
+.hover\:text-blue:hover{
+    --tw-text-opacity: 1;
+    color: rgba(55, 114, 255, var(--tw-text-opacity));
 }
 @media (min-width: 768px){
     .sm\:col-span-6{
