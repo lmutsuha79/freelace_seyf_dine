@@ -122,9 +122,8 @@
                         </div>
                     </div><!-- ./text_content -->
                     <div class="md:w-1/2 form_content  md:col-span-6">
-                        <form action="" method="POST"  id="send_mess_form"  class="w-full flex flex-col gap-4">
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_next" value="http://127.0.0.1:8080/message_sent.html">
+                        <form action="submit" id="send_mess_form"  class="w-full flex flex-col gap-4">
+                            
                             <div class="name_cont flex flex-col gap-2">
                                 <input autocomplete="off" required type="text" name="name" id="input_name" placeholder="Name">
                                 <span id="name_msg" class="hidden opacity-0 invisible text-xs font-normal">Please insert correct information.</span>
@@ -561,7 +560,7 @@
             message_input_validation()){
             send_mess_form.submit();
         }else{
-            alert('error in form validation')
+           console.log('validation === false')
         }
     });
 
