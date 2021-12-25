@@ -379,21 +379,25 @@
 
 
     input_subject.addEventListener('focusin',()=>{
+        console.log('in')
         remove_allert(input_subject,valide_subj);
         input_subject.classList.add('subject_inp_border_blue')
-        input_subject.disabled = true; 
+        //input_subject.disabled = true; 
     });
     input_subject.addEventListener('focusout',()=>{
+        console.log('out')
        // input_subject.classList.remove('subject_inp_border_blue')
     });
 
 
-   
+ 
     select_inp_div_container.addEventListener('click',toggle_subject_list);
+
     function toggle_subject_list(){
+        console.log('hello')
         subjects_list_div.classList.toggle('list_active');
         //remove_allert(input_subject,valide_subj);
-        input_subject.disabled = false;
+        //input_subject.disabled = false;
     }
  
 
