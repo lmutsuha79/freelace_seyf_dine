@@ -5,9 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 page</title>
-    <link rel="stylesheet" href="./one_page_section_style.css">
+    <link rel="stylesheet" href="./nav_footer_base_output.css">
+    <link rel="stylesheet" href="./one_page_section_output.css">
 </head>
 <body>
+    <!-- ################################################################################# -->
+    <!-- HEADER START /  -->
+    <header id="nav_header" class="bg-white fixed z-99 top-0 left-0 right-0">
+        <!-- ############################################################## -->
+            <!-- desk nav bar start -->
+            <nav class="desk_nav container flex flex-nowrap flex-row items-center justify-between ">
+                <a class="logo p-5px" href="index.html">
+                    <img src="./img/logo.svg" alt="logo" draggable="false" class=" w-full h-full">
+                </a><!-- ./logo_img -->
+    
+                <div class="hidden sm:block nav_links">
+                <ul class="flex flex-nowrap flex-row items-center text-gray hover_transition  font-semibold text-sm">
+                    <a href="#hero" class="activ_nav_link">Start</a>
+                    <a href="#about">About</a>
+                    <a href="#formats">Foramts</a>
+                    <a href="#download">Download</a>
+               
+                    <a href="./contact.html"
+                    class="contact_desk_nav_btn grid place-content-center text-black hover:text-white hover:border-none hover:bg-black hover_transition border-2 border-light_ray rounded-3xl"
+                    >Contact</a>
+                </ul>
+                </div><!-- ./nav_links -->
+    
+                <div id="mb_nav_btn" class="w-5 h-4 cursor-pointer sm:hidden">
+                    <svg id="oppen_nav_btn" class="fill-[#23262f] hover:fill-[#777E90] hover_transition" xmlns="http://www.w3.org/2000/svg" width="20" height="16" viewBox="0 0 20 16">
+                        <path class="" id="menu-Bold_1_" d="M225,1823a1,1,0,0,0-1-1H211a1,1,0,0,0,0,2h13A1,1,0,0,0,225,1823Zm-19,6h18a1,1,0,0,1,0,2H206a1,1,0,0,1,0-2Zm9,7h9a1,1,0,0,1,0,2h-9a1,1,0,0,1,0-2Z" transform="translate(-205 -1822)"/>
+                    </svg>
+                    <!-- <img id="oppen_nav_btn" src="./img/btns/oppen_nav_btn.svg" alt="oppen_nav"> -->
+    
+                    <svg id="close_nav_btn" class="hide_nav_btn fill-[#23262f] hover:fill-[#777E90] hover_transition" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16">
+                        <path d="M44.665,165.049a1.143,1.143,0,1,1-1.616,1.616L37,160.616l-6.049,6.049a1.143,1.143,0,0,1-1.616-1.616L35.384,159l-6.049-6.049a1.143,1.143,0,1,1,1.616-1.616L37,157.384l6.049-6.049a1.143,1.143,0,1,1,1.616,1.616L38.616,159Z" transform="translate(-29 -151)"/>
+                    </svg>
+    
+                    <!-- <img id="close_nav_btn" class="hide_nav_btn" src="./img/btns/close_nav_btn.svg" alt="close_nav"> -->
+                      
+                </div><!-- ./mb_nav_btn -->
+            </nav>
+            <div class="line_under_nav bg-light_ray"></div>
+            <!-- desk nav bar end -->
+    
+            <!-- mobile nave start  -->
+            <nav id="mb_nav" class="sm:hidden bg-white transform -translate-x-full ">
+                
+                <div class="mobile_nav_content container">
+                    <div class="page_links flex flex-col">
+                        <a href="#hero">Start</a>
+                        <a href="#about">About</a>
+                        <a href="#formats">Foramts</a>
+                        <a href="#download">Download</a>
+                        <a href="./contact.html">Contact</a>
+                    </div><!-- ./page_links -->
+                    <div class="line_under_nav bg-light_ray"></div>
+                    
+                    <ul class="social_links links page_links flex flex-col">
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)"/>
+                            </svg>
+                            <!-- <img src="./img//icons/arrow_icon.svg" alt=""> -->
+                            <span>Twitter</span>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)"/>
+                            </svg>
+                            <span>Instagram</span>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)"/>
+                            </svg>
+                            <span >Drible</span>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)"/>
+                            </svg>
+                            <span>Behance</span>
+                        </a>
+                        <a href="#">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="5" height="8" viewBox="0 0 5 8" fill="#23262f">
+                                <path id="chevron-circle-right-Bold_1_" d="M937.707,2045.293a1,1,0,0,1,0,1.414l-3,3a1,1,0,0,1-1.414-1.414l2.293-2.293-2.293-2.293a1,1,0,1,1,1.414-1.414Z" transform="translate(-933 -2042)"/>
+                            </svg>
+                            <span>Figma</span>
+                        </a>
+    
+                    </ul><!-- ./social_links -->
+                </div><!-- ./mobile_nav_content -->
+    
+            </nav>
+            <!-- mobile nave end  -->
+    
+        <!-- ############################################################## -->  
+    </header>
+    <!-- HEADER END /  -->
+    <!-- ################################################################################# -->
     <section>
         <div class="container">
         <div class="content ">
@@ -21,5 +118,29 @@
         </div>
     </div>
     </section>
+
+
+     <!-- ################################################################################# -->
+    <!-- FOOTER START /  -->
+
+    <footer>
+        
+        <div class="line_under_nav bg-light_ray"></div>
+        <div class="container">
+            <div class="last_footer py-6 flex flex-col sm:flex-row justify-center sm:justify-between items-center">
+                <span class="font-normal text-xs text-gray">© 2022 magicoon. All Rights Reserved</span>
+                <div class="text-xs flex items-center">
+                    <span class="text-gray font-normal flex gap-1 items-center">Made in 
+                        <img id="dz_flag_footer" class=" ml-1" src="./img/icons/dz_flag.svg" alt="dz">
+                    </span>
+                    <span class="text-gray font-normal  mx-1">by</span>    
+                    <a href="#" class="text-black hover:text-blue transition  font-semibold">Seyfeddine B.</a></div>
+            </div>
+        </div>
+    </footer>
+     <!-- FOOTER END /  -->
+    <!-- ################################################################################# -->
 </body>
+
+    <script src="./main.js"></script>
 </html>
