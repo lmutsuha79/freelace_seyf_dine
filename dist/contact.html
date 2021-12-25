@@ -11,7 +11,8 @@
 
 </head>
 <body>
-       
+    <!-- ################################################################################# -->
+    <!-- HEADER START /  -->
     <header id="nav_header" class="bg-white fixed z-99 top-0 left-0 right-0">
         <!-- ############################################################## -->
             <!-- desk nav bar start -->
@@ -102,8 +103,9 @@
         <!-- ############################################################## -->
     
            
-        </header>
-
+    </header>
+    <!-- HEADER END /  -->
+    <!-- ################################################################################# -->
     <main>
         <section id="contact" class="downforamts_box contact">
             <div class="container">
@@ -171,7 +173,7 @@
     </main>
 
 
-    <footer class="">
+    <footer>
         <div class="line_under_nav bg-light_ray"></div>
         <div class="container">
             <div class="footer_container grid_system">
@@ -339,6 +341,7 @@
     </footer>
 </body>
 <script src="./main.js"></script>
+
 <script>
     // this div contain all elemnts inp list of items and all 
     // so when clicking on any item in the list you'r click on this div 
@@ -359,7 +362,6 @@
         if(e.target != input_subject){
             subjects_list_div.classList.remove('list_active');
             input_subject.classList.remove('subject_inp_border_blue')
-
         }
      
       });

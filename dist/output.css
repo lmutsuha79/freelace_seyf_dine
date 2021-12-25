@@ -1279,10 +1279,6 @@ footer .links .social_title:hover{
 	--tw-translate-x: -100%;
 	transform: var(--tw-transform);
 }
-.translate-x-0{
-	--tw-translate-x: 0px;
-	transform: var(--tw-transform);
-}
 .transform{
 	transform: var(--tw-transform);
 }
@@ -1558,6 +1554,11 @@ h3{
 
 .nav_links ul> a {
    margin-left: 53px; 
+}
+@media screen and (max-width: 992px){
+    .nav_links ul> a {
+        margin-left: 35px; 
+    }
 }
 
 /* .nav_links ul >a:hover {
