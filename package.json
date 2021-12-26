@@ -18,8 +18,7 @@
     "build": "postcss src/styles.css -o dist/output.css --watch --verbose",
 
     
-    "production": "NODE_ENV=production postcss src/styles.css -o dist/output.css",
-    "build-css": "tailwindcss build -i src/styles.css -o dist/output.css"
+    "production": "NODE_ENV=production postcss src/styles.css -o dist/output.css"
   }
 }
 
