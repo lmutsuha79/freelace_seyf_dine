@@ -168,11 +168,15 @@
     }
 }
 
-
+/* .icons_styles .item:hover{
+    transform: scale(0.85);
+} */
 @layer components{
+    .icons_styles .item{
+        @apply transform transition-transform hover:scale-85%
+    }
     .about_text,.icons_styles{
         @apply text-center  sm:px-20 xl:px-48
-        
     }
     .about_text h3{
         @apply text-black font-bold  mb-8

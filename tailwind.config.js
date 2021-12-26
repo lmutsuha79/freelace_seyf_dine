@@ -5,8 +5,20 @@ module.exports = {
   ],
   darkMode: false, // or 'media' or 'class'
   theme: {
-   
+    
     extend: {
+      spacing: {
+        '30px': '30px',
+        '24px': '24px',
+        '20px': "20px",
+        '32px': "32px",
+        '15px': '15px',
+        '26px': '26px'
+
+      },
+      scale: {
+        '85%': '0.85',
+      },
       screens: {
         'sm': '768px',
         'md': '992px',
@@ -64,6 +76,7 @@ module.exports = {
     container: false
   },
   plugins: [
+    
     function ({ addComponents }) {
       addComponents({
         // extra small devices less than 768px
@@ -97,5 +110,6 @@ module.exports = {
         }
       })
     }
+
   ]
 }
