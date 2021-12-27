@@ -69,26 +69,18 @@
     #hero .box .box_content >div{
     min-width: 100%;
 }
-    .icons_styles .item{
-    transform: var(--tw-transform);
-    transition-property: transform;
-    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-    transition-duration: 150ms;
-}
-    .icons_styles .item:hover{
-    --tw-scale-x: 0.85;
-    --tw-scale-y: 0.85;
-    transform: var(--tw-transform);
-}
+    
     .about_text, .icons_styles{
     text-align: center;
 }
+    
     @media (min-width: 768px){
     .about_text, .icons_styles{
         padding-left: 5rem;
         padding-right: 5rem;
     }
 }
+    
     @media (min-width: 1200px){
     .about_text, .icons_styles{
         padding-left: 12rem;
@@ -404,6 +396,13 @@
 /* .icons_styles .item:hover{
     transform: scale(0.85);
 } */
+.icons_styles .item{
+    transition: transform 0.4s ease;
+}
+.icons_styles .item:hover{
+    transform: scale(0.9);
+
+}
 
 .about_text h3{
     font-size: 28px;
