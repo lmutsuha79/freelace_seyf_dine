@@ -15,10 +15,9 @@
     "build_contact": "postcss src/contact_style.css -o dist/css/contact_style_output.css --watch --verbose",
     "build_one_page": "postcss src/one_page_section_style.css -o dist/css/one_page_section_output.css --watch --verbose",
 
-    "build": "postcss src/styles.css -o dist/css/output.css --watch --verbose",
+    "build": "postcss src/styles.css -o dist/css/output.css --watch --verbose"
 
     
-    "production": "NODE_ENV=production postcss src/styles.css -o dist/css/output.css"
   }
 }
 

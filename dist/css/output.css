@@ -269,7 +269,7 @@
     display: grid;
     place-content: center;
     place-items: center;
-    background-image: url('./img/backgrounds/magicoon-header-icons.svg');
+    background-image: url('../img/backgrounds/magicoon-header-icons.svg');
 }
 
 
